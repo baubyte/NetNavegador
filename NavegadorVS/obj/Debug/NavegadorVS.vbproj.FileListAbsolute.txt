@@ -1,0 +1,12 @@
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.vbprojAssemblyReference.cache
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.Form1.resources
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.Resources.resources
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.vbproj.GenerateResource.cache
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Navegador\NavegadorVS\bin\Debug\NavegadorVS.exe.config
+D:\Dev\.NET\Navegador\NavegadorVS\bin\Debug\NavegadorVS.exe
+D:\Dev\.NET\Navegador\NavegadorVS\bin\Debug\NavegadorVS.pdb
+D:\Dev\.NET\Navegador\NavegadorVS\bin\Debug\NavegadorVS.xml
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.exe
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.xml
+D:\Dev\.NET\Navegador\NavegadorVS\obj\Debug\NavegadorVS.pdb
