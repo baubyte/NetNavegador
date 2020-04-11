@@ -31,6 +31,7 @@
             this.bBuscar = new System.Windows.Forms.Button();
             this.tBuscar = new System.Windows.Forms.TextBox();
             this.textBuscar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bBuscar
@@ -65,12 +66,23 @@
             this.textBuscar.Text = "Escriba su Busqueda";
             this.textBuscar.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(639, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Click para Buscar";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(255)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.tBuscar);
             this.Controls.Add(this.bBuscar);
@@ -87,6 +99,7 @@
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox tBuscar;
         private System.Windows.Forms.Label textBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
