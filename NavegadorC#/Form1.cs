@@ -32,7 +32,7 @@ namespace Navegador
             bool condicion = true;
             if (condicion)
             {
-                label1.Text = "¡Bien Hecho!";
+                lBuscar.Text = "¡Bien Hecho!";
             }
             System.Diagnostics.Process.Start("https://www.google.com.ar/search?sxsrf=ALeKk008WtCMJQ30Fh9B3k-XMtBeGDQLvA%3A1586010186706&source=hp&ei=SpiIXvyaKbnZ5OUPqImMoA8&q=" + tBuscar.Text + "&oq=" + tBuscar.Text + "&gs_lcp=CgZwc3ktYWIQAzIHCAAQgwEQQzICCAAyAggAMgIIADIFCAAQgwEyAggAMgIIADICCAAyAggAMgIIADoECCMQJzoGCCMQJxATOgQIABBDShMIFxIPMGcxNTVnMTQ0ZzUtMjc3Sg0IGBIJMGcxZzFnNS0xUKoLWIYRYOEUaABwAHgCgAHyBIgBmQySAQswLjIuMS4wLjEuMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwj856Wu_M7oAhW5LLkGHagEA_QQ4dUDCAY&uact=5");
         }
@@ -46,5 +46,64 @@ namespace Navegador
         {
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bBuscar.Visible = !bBuscar.Visible;
+            bIr.Visible = !bIr.Visible;
+        }
+
+        private void bAzul_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Blue;
+        }
+
+        private void bVerde_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Green;
+        }
+
+        private void bRojo_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            bool condicion = true;
+            if (condicion)
+            {
+                lBuscar.Text = "¡Bien Hecho!";
+            }
+        }
+
+        private void bIr_Click(object sender, EventArgs e)
+        {
+            bool condicion = true;
+            if (condicion)
+            {
+                lIr.Text = "¡Bien Hecho!";
+            }
+            if (String.IsNullOrEmpty(tBuscar.Text)) return; 
+            if (tBuscar.Equals("about:blank")) return; 
+            if (!tBuscar.Text.StartsWith("http://") && !tBuscar.Text.StartsWith("https://")) 
+            { 
+                tBuscar.Text = "http://" + tBuscar.Text; 
+            }
+            try { 
+                webBrowser1.Navigate(new Uri(tBuscar.Text)); 
+            } catch { 
+                MessageBox.Show("Se produjo un error."); 
+            }
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
