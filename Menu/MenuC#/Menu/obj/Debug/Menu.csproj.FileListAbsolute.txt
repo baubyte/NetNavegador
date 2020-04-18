@@ -1,0 +1,13 @@
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.csprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.Form1.resources
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.Properties.Resources.resources
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.csproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\bin\Debug\Menu.exe.config
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\bin\Debug\Menu.exe
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\bin\Debug\Menu.pdb
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.exe
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.pdb
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.Clientes.resources
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.Listados.resources
+D:\Dev\.NET\Facultad\Menu\MenuC#\Menu\obj\Debug\Menu.Proveedores.resources
