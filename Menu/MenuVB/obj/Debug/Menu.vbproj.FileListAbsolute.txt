@@ -1,0 +1,13 @@
+D:\Dev\.NET\Facultad\Menu\bin\Debug\Menu.exe.config
+D:\Dev\.NET\Facultad\Menu\bin\Debug\Menu.exe
+D:\Dev\.NET\Facultad\Menu\bin\Debug\Menu.pdb
+D:\Dev\.NET\Facultad\Menu\bin\Debug\Menu.xml
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.vbprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.Form1.resources
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.Resources.resources
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.vbproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.exe
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.xml
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.pdb
+D:\Dev\.NET\Facultad\Menu\obj\Debug\Menu.Clientes.resources
