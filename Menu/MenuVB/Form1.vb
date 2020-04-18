@@ -22,4 +22,28 @@
         cliente.BackColor = Color.Red
         cliente.ShowDialog()
     End Sub
+
+    Private Sub bProveedores_Click(sender As Object, e As EventArgs) Handles bProveedores.Click
+        Dim proveedor As New Proveedores
+        proveedor.BackColor = Color.Green
+        proveedor.ShowDialog()
+    End Sub
+
+    Private Sub bListados_Click(sender As Object, e As EventArgs) Handles bListados.Click
+        Dim listado As New Listados
+        listado.BackColor = Color.Blue
+        listado.ShowDialog()
+    End Sub
+
+    Private Sub ListadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadosToolStripMenuItem.Click
+        Dim listado As New Listados
+        listado.BackColor = Color.Blue
+        listado.ShowDialog()
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
+        Dim proveedor As New Proveedores
+        proveedor.BackColor = Color.Green
+        proveedor.ShowDialog()
+    End Sub
 End Class

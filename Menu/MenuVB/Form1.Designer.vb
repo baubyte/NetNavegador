@@ -113,13 +113,13 @@ Partial Class Form1
         'BackupsToolStripMenuItem
         '
         Me.BackupsToolStripMenuItem.Name = "BackupsToolStripMenuItem"
-        Me.BackupsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackupsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.BackupsToolStripMenuItem.Text = "Backups"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'VentasToolStripMenuItem
@@ -132,19 +132,19 @@ Partial Class Form1
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'FacturasToolStripMenuItem
         '
         Me.FacturasToolStripMenuItem.Name = "FacturasToolStripMenuItem"
-        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.FacturasToolStripMenuItem.Text = "Facturas"
         '
         'IIBBToolStripMenuItem
         '
         Me.IIBBToolStripMenuItem.Name = "IIBBToolStripMenuItem"
-        Me.IIBBToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IIBBToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.IIBBToolStripMenuItem.Text = "IIBB"
         '
         'ComprasToolStripMenuItem
@@ -163,13 +163,13 @@ Partial Class Form1
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'EntregasToolStripMenuItem
         '
         Me.EntregasToolStripMenuItem.Name = "EntregasToolStripMenuItem"
-        Me.EntregasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EntregasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.EntregasToolStripMenuItem.Text = "Entregas"
         '
         'Form1
