@@ -7,6 +7,17 @@
     End Sub
 
     Private Sub bSalir_Click(sender As Object, e As EventArgs) Handles bSalir.Click
-        End
+        Me.Close()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lText.Click
+
+    End Sub
+
+    Private Sub Fin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lPuntaje.Text = Score.scores
+    End Sub
+
+    Private Sub lTitulo_Click(sender As Object, e As EventArgs) Handles lTitulo.Click
     End Sub
 End Class

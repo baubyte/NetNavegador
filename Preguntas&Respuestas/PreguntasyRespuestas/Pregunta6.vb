@@ -1,8 +1,8 @@
-﻿Public Class Pregunta3
+﻿Public Class Pregunta6
     Private Sub bB_Click(sender As Object, e As EventArgs) Handles bB.Click
-        Dim preg4 As New Pregunta4
-        preg4.BackgroundImage = PreguntasyRespuestas.My.Resources.Resources.wp3638491
-        preg4.Show()
+        Dim fin As New Fin
+        fin.BackgroundImage = PreguntasyRespuestas.My.Resources.Resources.wp3638491
+        fin.Show()
         Me.Close()
     End Sub
 

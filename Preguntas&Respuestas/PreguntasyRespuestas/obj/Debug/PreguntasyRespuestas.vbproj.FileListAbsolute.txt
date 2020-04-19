@@ -16,3 +16,4 @@ D:\Dev\.NET\Facultad\Preguntas&Respuestas\PreguntasyRespuestas\obj\Debug\Pregunt
 D:\Dev\.NET\Facultad\Preguntas&Respuestas\PreguntasyRespuestas\obj\Debug\PreguntasyRespuestas.Pregunta4.resources
 D:\Dev\.NET\Facultad\Preguntas&Respuestas\PreguntasyRespuestas\obj\Debug\PreguntasyRespuestas.Pregunta5.resources
 D:\Dev\.NET\Facultad\Preguntas&Respuestas\PreguntasyRespuestas\obj\Debug\PreguntasyRespuestas.Fin.resources
+D:\Dev\.NET\Facultad\Preguntas&Respuestas\PreguntasyRespuestas\obj\Debug\PreguntasyRespuestas.Pregunta6.resources

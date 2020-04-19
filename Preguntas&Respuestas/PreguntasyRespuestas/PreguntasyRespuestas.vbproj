@@ -131,6 +131,13 @@
     <Compile Include="Pregunta5.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pregunta6.Designer.vb">
+      <DependentUpon>Pregunta6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pregunta6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Score.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Fin.resx">
@@ -159,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pregunta5.resx">
       <DependentUpon>Pregunta5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregunta6.resx">
+      <DependentUpon>Pregunta6.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -8,9 +8,11 @@
 
     Private Sub bB_Click(sender As Object, e As EventArgs) Handles bB.Click
         MessageBox.Show("Intentalo de Nuevo")
+        Score.scores += 1
     End Sub
 
     Private Sub bC_Click(sender As Object, e As EventArgs) Handles bC.Click
         MessageBox.Show("Intentalo de Nuevo")
+        Score.scores += 1
     End Sub
 End Class
