@@ -1,0 +1,12 @@
+D:\Dev\.NET\Facultad\Dados\DadosVB\bin\Debug\DadosVB.exe.config
+D:\Dev\.NET\Facultad\Dados\DadosVB\bin\Debug\DadosVB.exe
+D:\Dev\.NET\Facultad\Dados\DadosVB\bin\Debug\DadosVB.pdb
+D:\Dev\.NET\Facultad\Dados\DadosVB\bin\Debug\DadosVB.xml
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.vbprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.Resources.resources
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.vbproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.exe
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.xml
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.pdb
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.Form1.resources
