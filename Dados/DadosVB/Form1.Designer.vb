@@ -41,7 +41,7 @@ Partial Class Form1
         '
         Me.bSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.bSalir.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bSalir.Location = New System.Drawing.Point(713, 456)
+        Me.bSalir.Location = New System.Drawing.Point(12, 12)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(69, 44)
         Me.bSalir.TabIndex = 0
@@ -60,7 +60,7 @@ Partial Class Form1
         'Dado1
         '
         Me.Dado1.BackgroundImage = Global.DadosVB.My.Resources.Resources.dado6
-        Me.Dado1.Location = New System.Drawing.Point(88, 84)
+        Me.Dado1.Location = New System.Drawing.Point(101, 366)
         Me.Dado1.Name = "Dado1"
         Me.Dado1.Size = New System.Drawing.Size(94, 95)
         Me.Dado1.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class Form1
         'Dado2
         '
         Me.Dado2.BackgroundImage = Global.DadosVB.My.Resources.Resources.dado6
-        Me.Dado2.Location = New System.Drawing.Point(88, 225)
+        Me.Dado2.Location = New System.Drawing.Point(243, 366)
         Me.Dado2.Name = "Dado2"
         Me.Dado2.Size = New System.Drawing.Size(94, 95)
         Me.Dado2.TabIndex = 3
@@ -78,7 +78,7 @@ Partial Class Form1
         'Dado3
         '
         Me.Dado3.BackgroundImage = Global.DadosVB.My.Resources.Resources.dado6
-        Me.Dado3.Location = New System.Drawing.Point(88, 369)
+        Me.Dado3.Location = New System.Drawing.Point(379, 366)
         Me.Dado3.Name = "Dado3"
         Me.Dado3.Size = New System.Drawing.Size(94, 95)
         Me.Dado3.TabIndex = 4
@@ -87,7 +87,7 @@ Partial Class Form1
         'Dado4
         '
         Me.Dado4.BackgroundImage = Global.DadosVB.My.Resources.Resources.dado6
-        Me.Dado4.Location = New System.Drawing.Point(245, 134)
+        Me.Dado4.Location = New System.Drawing.Point(517, 366)
         Me.Dado4.Name = "Dado4"
         Me.Dado4.Size = New System.Drawing.Size(94, 95)
         Me.Dado4.TabIndex = 5
@@ -96,7 +96,7 @@ Partial Class Form1
         'Dado5
         '
         Me.Dado5.BackgroundImage = Global.DadosVB.My.Resources.Resources.dado6
-        Me.Dado5.Location = New System.Drawing.Point(245, 317)
+        Me.Dado5.Location = New System.Drawing.Point(659, 366)
         Me.Dado5.Name = "Dado5"
         Me.Dado5.Size = New System.Drawing.Size(94, 95)
         Me.Dado5.TabIndex = 6
