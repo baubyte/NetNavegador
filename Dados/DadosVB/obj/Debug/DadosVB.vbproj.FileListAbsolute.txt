@@ -10,3 +10,4 @@ D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.exe
 D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.xml
 D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.pdb
 D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.Form1.resources
+D:\Dev\.NET\Facultad\Dados\DadosVB\obj\Debug\DadosVB.Incio.resources

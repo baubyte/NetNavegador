@@ -22,36 +22,30 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.bSalir = New System.Windows.Forms.Button()
         Me.Cubilete = New System.Windows.Forms.PictureBox()
         Me.Dado1 = New System.Windows.Forms.PictureBox()
         Me.Dado2 = New System.Windows.Forms.PictureBox()
         Me.Dado3 = New System.Windows.Forms.PictureBox()
         Me.Dado4 = New System.Windows.Forms.PictureBox()
         Me.Dado5 = New System.Windows.Forms.PictureBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lTurno = New System.Windows.Forms.Label()
+        Me.lNombreJugador = New System.Windows.Forms.Label()
         CType(Me.Cubilete, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dado1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dado2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dado3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dado4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dado5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'bSalir
-        '
-        Me.bSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.bSalir.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bSalir.Location = New System.Drawing.Point(12, 12)
-        Me.bSalir.Name = "bSalir"
-        Me.bSalir.Size = New System.Drawing.Size(69, 44)
-        Me.bSalir.TabIndex = 0
-        Me.bSalir.Text = "Salir"
-        Me.bSalir.UseVisualStyleBackColor = False
         '
         'Cubilete
         '
         Me.Cubilete.BackColor = System.Drawing.Color.Transparent
-        Me.Cubilete.Location = New System.Drawing.Point(473, 12)
+        Me.Cubilete.Location = New System.Drawing.Point(464, 12)
         Me.Cubilete.Name = "Cubilete"
         Me.Cubilete.Size = New System.Drawing.Size(319, 272)
         Me.Cubilete.TabIndex = 1
@@ -102,6 +96,52 @@ Partial Class Form1
         Me.Dado5.TabIndex = 6
         Me.Dado5.TabStop = False
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(1, 1)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(77, 24)
+        Me.MenuStrip1.TabIndex = 7
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'OpcionesToolStripMenuItem
+        '
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.OpcionesToolStripMenuItem.Text = "&Opciones"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.SalirToolStripMenuItem.Text = "&Salir"
+        '
+        'lTurno
+        '
+        Me.lTurno.AutoSize = True
+        Me.lTurno.BackColor = System.Drawing.Color.Transparent
+        Me.lTurno.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lTurno.ForeColor = System.Drawing.Color.White
+        Me.lTurno.Location = New System.Drawing.Point(4, 34)
+        Me.lTurno.Name = "lTurno"
+        Me.lTurno.Size = New System.Drawing.Size(155, 27)
+        Me.lTurno.TabIndex = 8
+        Me.lTurno.Text = "Es el Turno de:"
+        '
+        'lNombreJugador
+        '
+        Me.lNombreJugador.AutoSize = True
+        Me.lNombreJugador.BackColor = System.Drawing.Color.Transparent
+        Me.lNombreJugador.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lNombreJugador.ForeColor = System.Drawing.Color.White
+        Me.lNombreJugador.Location = New System.Drawing.Point(156, 36)
+        Me.lNombreJugador.Name = "lNombreJugador"
+        Me.lNombreJugador.Size = New System.Drawing.Size(0, 27)
+        Me.lNombreJugador.TabIndex = 9
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -109,14 +149,19 @@ Partial Class Form1
         Me.BackgroundImage = Global.DadosVB.My.Resources.Resources.mesa
         Me.ClientSize = New System.Drawing.Size(784, 503)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lNombreJugador)
+        Me.Controls.Add(Me.lTurno)
         Me.Controls.Add(Me.Dado5)
         Me.Controls.Add(Me.Dado4)
         Me.Controls.Add(Me.Dado3)
         Me.Controls.Add(Me.Dado2)
         Me.Controls.Add(Me.Dado1)
         Me.Controls.Add(Me.Cubilete)
-        Me.Controls.Add(Me.bSalir)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Apretá el Cubilete para tirar los dados"
         CType(Me.Cubilete, System.ComponentModel.ISupportInitialize).EndInit()
@@ -125,15 +170,21 @@ Partial Class Form1
         CType(Me.Dado3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dado4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dado5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents bSalir As Button
     Friend WithEvents Cubilete As PictureBox
     Friend WithEvents Dado1 As PictureBox
     Friend WithEvents Dado2 As PictureBox
     Friend WithEvents Dado3 As PictureBox
     Friend WithEvents Dado4 As PictureBox
     Friend WithEvents Dado5 As PictureBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lTurno As Label
+    Friend WithEvents lNombreJugador As Label
 End Class
