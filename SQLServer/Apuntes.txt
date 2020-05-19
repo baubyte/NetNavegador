@@ -1,0 +1,240 @@
+SELECT 'EL PRECIO ES ' + CAST(ListPrice AS VARCHAR(12)) AS PrecioLista
+FROM Production.Product
+WHERE ListPrice BETWEEN 350.00 AND 400.00
+BETWEEN incluye los extremos.
+SELECT CAST(ROUND(SalesYTD/CommissionPct,0) AS INT) AS Calculo
+FROM Sales.SalesPerson
+WHERE CommissionPct !=0 --> not 0
+SELECT SUBSTRING(Name,1,30) AS NombreProducto, ListPrice, CONVERT(INT,ListPrice)
+FROM Production.Product
+WHERE CONVERT(INT,ListPrice) LIKE '3%'
+El convert es igual que el CAST pero al revés. '3%' es similar al 3* comodin
+Tipos de datos para fecha:
+DATETIME: es la fecha y la hora. Soporta hasta con 3 nanosegundos
+DATETIME2 soporta hasta con una precisión de hasta 100 nanosegundos
+GETTIME devuelve la hora del servidor, no la de la maquina local.
+GETDATE devuelve la fecha del servidor, no la de la maquina local.
+SELECT CAST('1978-12-21' AS DATETIME) AS FECHA
+SELECT SYSDATETIME() AS SYSDATETIME_,
+SYSDATETIMEOFFSET() AS SYSDATETIME_,
+SYSUTCDATETIME() AS SYSUTC,
+CURRENT_TIMESTAMP AS CURRENT_,
+GETDATE() AS GETDATE_,
+GETUTCDATE() AS GETUTC_
+NOMBRES
+SELECT DATENAME(YEAR,'1978-12-21') AS Anio,
+DATENAME(MONTH,'1978-12-21') AS Mes,
+DATENAME(DAY,'1978-12-21') AS Dia,
+DATENAME(DAYOFYEAR,'1978-12-21') AS DiaDelAnio,
+DATENAME(WEEKDAY,'1978-12-21') AS NombreDelDia
+NUMEROS
+SELECT DATEPART(YEAR,'1978-12-21') AS Anio,
+DATEPART(MONTH,'1978-12-21') AS Mes,
+DATEPART(DAY,'1978-12-21') AS Dia,
+DATEPART(DAYOFYEAR,'1978-12-21') AS DiaDelAnio,
+DATEPART(WEEKDAY,'1978-12-21') AS NombreDelDia
+SELECT DAY('1978-12-21'),MONTH('1978-12-21'),YEAR('1978-12-21')
+EXEC sp_helplanguage ME DA EL LISTADO DE LENGUAJES
+SET LANGUAGE SPANISH ESTABLECE EL LENGUAJE EN ESPAÑOL
+/*-------------------------*/
+DECLARE @Fecha DateTime /* se puede hacer también la asignación acá .... = CAST(....) */
+SET @Fecha = CAST('1978/12/21' AS DateTime) /*carga el valor en la varible*/
+/*es lo mimsmo DECLARE @Fecha DateTime = CAST('1978/12/21' AS DateTime*/
+SELECT MONTH(@Fecha)
+/*------------------------------*/
+Funciones que no funcionan.
+DateDiff(qué cosa es lo que querés obtener, fecha de inicio, fecha de fin)
+date: diferencia en días
+Meses: diferencia en meses
+Etc.
+El datediff redondea, si num>0.5 entonces redondea para arriba.
+SELECT DATEDIFF(YEAR,@Fecha,GETDATE()) /*esto está mal*/
+Entonces...
+SELECT CAST(CAST((GETDATE()-@FECHA) AS INT)/365.25 AS INT)
+Lo que hace esto es GETDATE()-@FECHA AS INT resta las fechas y devuelve en número entero la cantidad de días entre ambas
+fechas. /365.25 AS INT divide por la cantidad de años y .25 es por los años bisiestos.
+/*------------------------------*/
+/*para meses contables*/
+DECLARE @Fecha DateTime = CAST('2010/12/21' AS DateTime)
+SELECT CAST(CAST((GETDATE()-@FECHA) AS INT)/30 AS INT)
+/*------------------------------*/
+DECLARE @Fecha DateTime = CAST('2010/12/31' AS DateTime)
+SELECT DATEDIFF(MONTH,@Fecha,CAST('2011/01/01' AS DateTime)) /*--> ESTO DA 1 ¿¿??*/
+/*------------------------------*/
+DECLARE @Fecha DateTime = CAST('2010/12/31' AS DateTime)
+SELECT DATEDIFF(YEAR,@Fecha,CAST('2011/01/01' AS DateTime)) /*--> ESTO DA 1 ¿¿??*/
+/*------------------------------*/
+/* Estructuras */
+USE AdventureWorks GO
+/* DELCARE @AVG money = (SELECT AVG(Production.Product.ListPrice) FROM Production.Product) < $300*/
+/* DELCARE @AVG money
+SELECT @AVG = AVG(Production.Product.ListPrice) FROM Production.Product) */
+/*WHILE @AVG < $300*/
+/*la línea siguiente cada vez que pasa por el while vuelve a calcular el AVG...
+lo cual se evita con lo anterior */
+WHILE (SELECT AVG(Production.Product.ListPrice) FROM Production.Product) < $300
+/* $ indica que el valor es de tipo moneda*/
+BEGIN /* para poner más de una línea se debe iniciar el bloque con begin*/
+UPDATE Production.Product
+SET ListPrice = ListPrice * 2
+SELECT MAX(ListPrice) FROM Production.Product
+IF (SELECT MAX(ListPrice) FROM Production.Product) > $500
+/* si acá va más de una línea debe ir un begin*/
+BREAK /* salta del WHILE, es un exit */
+ELSE
+CONTINUE /* Continúa la ejecución del WHILE, no es necesario */
+END
+PRINT 'Demasiado caro';
+/*------------------------------------------*/
+/*Equivalente al IIF */
+USE AdventureWorks
+GO
+SELECT ProductNumber, CATEGORIA=
+CASE ProductLine
+WHEN 'R' THEN 'Ruta'
+WHEN 'M' THEN 'Montaña'
+WHEN 'T' THEN 'Turismo'
+WHEN 'S' THEN 'Otros Items para vender'
+ELSE 'No se vende'
+END,
+Name
+FROM Production.Product
+ORDER BY ProductNumber
+/*------------------------------------------*/
+USE AdventureWorks
+GO
+SELECT ProductNumber, Name, [Rango de Precio] = 'Rango de precio ' +
+CASE
+WHEN ListPrice = 0 THEN 'que no es para venta'
+WHEN ListPrice < 50 THEN 'por debajo de $ 50'
+WHEN ListPrice <= 50 AND ListPrice < 250 THEN 'por debajo de $250'
+WHEN ListPrice >= 50 AND ListPrice < 1000 THEN 'por debajo de $1000'
+ELSE 'por sobre $ 1000'
+END
+FROM Production.Product
+ORDER BY ProductNumber
+/*------------------------------------------*/
+/* Creación y llamada de funciones */
+USE Northwind
+GO
+CREATE FUNCTION Promocion(@CustomerId nchar(5)) RETURNS Money AS
+BEGIN
+DECLARE @Sal Money, @Cant INT = (SELECT COUNT(OrderId) FROM ORDERS WHERE CustomerId=@CustomerId) /* Cuantas
+veces aparece el cliente en la tabla de facturas */
+SET @Sal = CASE
+WHEN @Cant > 1 AND @Cant < 3 THEN 10
+WHEN @Cant >= 3 AND @Cant < 7 THEN 15
+WHEN @Cant >= 7 THEN 20
+ELSE 0
+END
+RETURN @Sal
+END
+/*------------------------------------------*/
+/* Llamado a la función*/
+USE Northwind
+GO
+SELECT CompanyName, dbo.Promocion(Customerid) as Promo
+FROM Customers
+/*------------------------------------------*/
+INSERT INTO (TABLA)
+(CAMPO1, CAMPO2, CAMPO3, CAMPO n)
+VALUES (VALOR1, VALOR2, VALOR3, VALOR n)
+WHERE (CONDICIONES)
+UPDATE (TABLA)
+SET (CAMPO1 = VALOR1), (CAMPO2 = VALOR2), (CAMPO3 = VALOR3), (CAMPO n = VALOR n)
+WHERE (CONDICION)
+DELETE (TABLA)
+WHERE (CONDICION)
+Cualquier instrucción de las anteriores que no tengan un WHERE afecta a la totalidad de los registros
+ALTER (TABLA) ADD
+(Nombre campo1) (tipo de datos) (NULL o NOT NULL),
+(Nombre campo2) (tipo de datos) (NULL o NOT NULL),
+(Nombre campo3) (tipo de datos) (NULL o NOT NULL),
+(Nombre campo n) (tipo de datos) (NULL o NOT NULL)
+--> agregar un campo
+Nota: NULL o NOT NULL refiere a si admite valores nulos o no.
+ALTER (TABLA) DROP COLUMN (Nombre de campo) --> elimina el campo
+/*------------------------------------------*/
+CREATE PROC (NombreProcedimiento) (@(Parámetros de entrada o de salida separados por comas))
+AS
+(Instrucciones del procedimiento, si son más de una línea, va BEGIN-END)
+Un procedure devuelve registros o un valor. Cuando devuelve valores, lo hace a través de parámetros
+de salida (OUTPUT)
+CREATE PROC Cosa (@NroCliente VarChar(5))
+AS
+SELECT *
+FROM Orders
+WHERE CustomerID=@NroCliente
+Ejecución del procedimiento dentro de SQL:
+EXEC Cosa 'Alfki'
+La primera vez que se ejecuta el procedimiento, tarda más ya que hace la vez de compilación y ejecución
+/*------------------------------------------*/
+/* Con parámetros de salida */
+CREATE PROC Cosa2
+@NroCliente VarChar(5)
+@Total Money OUTPUT
+AS
+Set @Total = (SELECT SUM(Monto) FROM Facturas WHERE CustomerID=@NroCliente)
+Otra forma de asignar el valor en el parámetro @Total es:
+SELECT @Total = SUM(Monto) FROM Facturas WHERE CustomerID=@NroCliente
+Y si tuviera que asignar más de un parámetro tomando valores del mismo select...:
+SELECT @Total = SUM(Monto), @Promedio = AVG(Monto) FROM Facturas WHERE CustomerID=@NroCliente
+El GO corta la estructura del proceso y hace como que empieza otra vez, por lo tanto no se puede poner
+un GO dentro de un storeProcedure porque corta la ejecución del mismo hasta la línea anterior del GO.
+Por ello es que no se puede crear un procedimiento dentro de otro.
+/* Llamada al storeProcedure */
+Un SP puede llamar a otro SP.
+DECLARE @XTotal MONEY -- XPRECIO PARA NO MEZCLARLA CON @PRECIO
+EXECUTE Cosa2 'Alfki', @Total = @XTotal OUTPUT -- LA ASIGNACION ES A LA INVERSA
+PRINT @XTotal --MUESTRA EN PANTALLA --> es lo mismo que poner Select @xTotal
+/*------------------------------------------*/
+/* EJERCICIO */
+Antes de hacer nada, preguntar, chequear. Si todo está bien, proceder. Simular la tabla Product como si fuera cuenta bancaria.
+Utilizar el Stock como monto disponible.
+Condiciones: que ambas personas existan y que el primero tenga dinero. Detectar el error y cuantificarlo.
+Proceso, detectar error, si no hay, realizar el update.
+Esto devolvera true o false. Se hizo o no. Si se hizo es OK en variable de parámetro de salida. Si no se hizo, que devuelva
+qué error es y todos los errores que hay: si uno no existe, si el otro no existe, si el monto no es correcto, etc.
+SELECT @variable = count(nroCli) FROM cuentas WHERE (nrocli=12 and monto>monto a transferir) OR nrocli=24
+Caso fortuito:
+UPDATE...
+Caso error
+evaluar el error
+SERIA ALGO ASI:
+USE [Northwind]
+GO
+/****** Object: StoredProcedure [dbo].[trans] Script Date: 07/19/2011 18:12:13 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER proc [dbo].[trans](@corigen int, @cdestino int, @monto int, @MSG VARCHAR (600) OUTPUT)
+AS
+begin
+declare @Cant INT
+set @MSG =''
+SET @Cant = (select count(ProductID) from dbo.Products where (ProductID = @corigen and UnitsInStock >= @monto) OR (ProductID = @cdestino ))
+if @Cant = 2
+BEGIN
+UPDATE [Northwind].[dbo].[Products]
+SET [UnitsInStock] = [UnitsInStock] - @monto
+WHERE ProductID = @corigen
+UPDATE [Northwind].[dbo].[Products]
+SET [UnitsInStock] = [UnitsInStock] + @monto
+WHERE ProductID = @cdestino
+SET @MSG = 'SE HA TRANSFERIDO DE '+ CAST(@corigen AS VARCHAR(100)) + ' A ' + CAST(@cdestino AS VARCHAR(100)) + ' EL SIG MONTO ' + CAST(@monto AS VARCHAR(100))
+END
+ELSE
+begin
+IF (select count(ProductID) from dbo.Products where ProductID = @corigen) = 0
+SET @MSG = 'NO EXISTE CLIENTE ORIGEN ' + char(13) + char(10)
+IF (select count(ProductID) from dbo.Products where (ProductID = @corigen AND UnitsInStock < @monto)) = 1
+SET @MSG =@MSG+ 'NO ALCANZA EL MONTO ' + char(13) + char(10)
+IF (select count(ProductID) from dbo.Products where ProductID = @cdestino) = 0
+SET @MSG =@MSG+ 'NO EXISTE CLIENTE DESTINO'
+end
+end
+declare @hh VARCHAR (600)
+exec trans 1,2000000000,2, @MSG = @hh output
+print @hh
+select UnitsInStock,ProductID from dbo.Products where ProductID in (1,2)

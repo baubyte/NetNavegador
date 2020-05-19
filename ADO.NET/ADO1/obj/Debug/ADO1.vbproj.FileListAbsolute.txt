@@ -1,0 +1,12 @@
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\bin\Debug\ADO1.exe.config
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\bin\Debug\ADO1.exe
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\bin\Debug\ADO1.pdb
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\bin\Debug\ADO1.xml
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.vbprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.Form1.resources
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.Resources.resources
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.vbproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.exe
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.xml
+D:\Dev\.NET\Facultad\ADO.NET\ADO1\obj\Debug\ADO1.pdb
