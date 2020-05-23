@@ -1,0 +1,12 @@
+D:\Dev\.NET\Facultad\abmCustomers\VB\bin\Debug\ABM.exe.config
+D:\Dev\.NET\Facultad\abmCustomers\VB\bin\Debug\ABM.exe
+D:\Dev\.NET\Facultad\abmCustomers\VB\bin\Debug\ABM.pdb
+D:\Dev\.NET\Facultad\abmCustomers\VB\bin\Debug\ABM.xml
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.vbprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.Resources.resources
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.vbproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.exe
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.xml
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.pdb
+D:\Dev\.NET\Facultad\abmCustomers\VB\obj\Debug\ABM.abmCustomers.resources
