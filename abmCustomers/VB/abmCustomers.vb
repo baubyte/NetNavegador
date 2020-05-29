@@ -8,14 +8,12 @@ Public Class abmCustomers
     End Sub
     'Para Buscar los Clientes
     Sub buscar(ByVal condicion As String)
-        Dim dataAdapter As New SqlDataAdapter("SELECT TOP (100) PERCENT ID As id, CompanyName AS cliente, ContactName AS contacto FROM Customers WHERE " & condicion & " ORDER BY cliente", connection)
+        Dim dataAdapter As New SqlDataAdapter("SELECT TOP (100) PERCENT NCliente, ApeYNom, CUIT FROM ClientesBusqueda WHERE " & condicion & " ORDER BY ApeYNom", connection)
         Dim dataSet As New DataSet
         dataAdapter.Fill(dataSet, "clientes")
         If dataSet.Tables("clientes").Rows.Count = 0 Then
 
             gridClientes.Visible = False
-
-            pBotones.Visible = False
             pCampos.Visible = False
             lIdCliente.Visible = False
         Else

@@ -12,11 +12,11 @@ Module Routines
             'Abrimos el Archivo y Guaardamos el contenido en SR
             Dim SR As StreamReader = File.OpenText("C:\Connections\ConfigDb.txt")
             'Leemos las lineas hasta el enter y guardamos en Line
-            archivo = SR.ReadLine()
+            Dim Line As String = SR.ReadLine()
             'Cerramos el archivo
             SR.Close()
             'Devolvemos la linea que leida
-            Return archivo
+            Return Line
         End If
     End Function
     'Para comprobar si existe en la DB
