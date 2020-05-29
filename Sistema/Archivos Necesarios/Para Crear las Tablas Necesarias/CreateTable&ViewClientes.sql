@@ -37,7 +37,7 @@ GO
     
     CREATE VIEW [dbo].[ClientesBusqueda]
     AS
-    SELECT     TOP (100) PERCENT NCliente, UPPER(LTRIM(ApellidoCliente) + ',  ' + LTRIM(NombreCliente)) AS ApeYNom
+    SELECT     TOP (100) PERCENT NCliente, UPPER(LTRIM(ApellidoCliente) + ',  ' + LTRIM(NombreCliente)) AS ApeYNom , CuitCliente AS CUIT
     FROM         dbo.Clientes
     order by UPPER(LTRIM(ApellidoCliente) + ',  ' + LTRIM(NombreCliente))
     GO

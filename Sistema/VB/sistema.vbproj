@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clientes.Designer.vb">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inicio.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,8 +101,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Routines.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +128,51 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedorOp2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savetheapplication_guardar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_37110.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_add_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_delete_delete.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

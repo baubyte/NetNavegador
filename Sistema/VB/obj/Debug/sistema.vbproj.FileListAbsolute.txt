@@ -1,0 +1,13 @@
+D:\Dev\.NET\Facultad\Sistema\VB\bin\Debug\sistema.exe.config
+D:\Dev\.NET\Facultad\Sistema\VB\bin\Debug\sistema.exe
+D:\Dev\.NET\Facultad\Sistema\VB\bin\Debug\sistema.pdb
+D:\Dev\.NET\Facultad\Sistema\VB\bin\Debug\sistema.xml
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.vbprojAssemblyReference.cache
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.inicio.resources
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.Resources.resources
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.vbproj.GenerateResource.cache
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.vbproj.CoreCompileInputs.cache
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.exe
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.xml
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.pdb
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.clientes.resources
