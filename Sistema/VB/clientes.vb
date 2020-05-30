@@ -198,7 +198,7 @@ Public Class clientes
             errores &= "Debe Completar el o los Apellido del Cliente." & enter
         End If
         If tNombre.Text.Trim.Length < 3 Then
-            errores &= "Debe Completar el o los Nombre deL Cliente." & enter
+            errores &= "Debe Completar el o los Nombre del Cliente." & enter
         End If
         If tUsuario.Text.Trim.Length < 3 Then
             errores &= "Debe Completar el Usuario." & enter
@@ -215,7 +215,7 @@ Public Class clientes
             errores &= "Debe completar CORRECTAMENTE el Numero de CUIT." & enter
         End If
         If errores.Length > 0 Then
-            MsgBox("Hubo errores, Por Favor Verifique y Corrija Antes de Intentar de Nuevo:" & enter & enter & errores, MsgBoxStyle.Information, "Erores")
+            MsgBox("Hubo errores, Por Favor Verifique y Corrija Antes de Intentar de Nuevo:" & enter & enter & errores, MsgBoxStyle.Information, "Errores")
             Exit Sub
         End If
         'Ejecutamos el Update

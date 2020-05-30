@@ -38,7 +38,7 @@ Partial Class proveedores
         Me.lblSistema = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlContenido = New System.Windows.Forms.Panel()
-        Me.lIdCliente = New System.Windows.Forms.Label()
+        Me.lIdProveedor = New System.Windows.Forms.Label()
         Me.pCampos = New System.Windows.Forms.Panel()
         Me.tEmail = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -65,10 +65,7 @@ Partial Class proveedores
         Me.tNombre = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tApellido = New System.Windows.Forms.TextBox()
-        Me.gridClientes = New System.Windows.Forms.DataGridView()
-        Me.ncliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApeYNom = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gridProveedores = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -77,8 +74,11 @@ Partial Class proveedores
         Me.menuClientes = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.nproveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApeYNom = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlTitulo.SuspendLayout()
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,7 +88,7 @@ Partial Class proveedores
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlContenido.SuspendLayout()
         Me.pCampos.SuspendLayout()
-        CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuClientes.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -189,7 +189,7 @@ Partial Class proveedores
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(185, 64)
         Me.btnBorrar.TabIndex = 6
-        Me.btnBorrar.Text = "&Borrar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Provvedor"
+        Me.btnBorrar.Text = "&Borrar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor"
         Me.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
@@ -215,7 +215,7 @@ Partial Class proveedores
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(185, 64)
         Me.btnNuevo.TabIndex = 4
-        Me.btnNuevo.Text = "&Nuevo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Provvedor"
+        Me.btnNuevo.Text = "&Nuevo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Proveedor"
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
@@ -270,9 +270,9 @@ Partial Class proveedores
         'pnlContenido
         '
         Me.pnlContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.pnlContenido.Controls.Add(Me.lIdCliente)
+        Me.pnlContenido.Controls.Add(Me.lIdProveedor)
         Me.pnlContenido.Controls.Add(Me.pCampos)
-        Me.pnlContenido.Controls.Add(Me.gridClientes)
+        Me.pnlContenido.Controls.Add(Me.gridProveedores)
         Me.pnlContenido.Controls.Add(Me.Label2)
         Me.pnlContenido.Controls.Add(Me.Panel4)
         Me.pnlContenido.Controls.Add(Me.Label1)
@@ -286,16 +286,16 @@ Partial Class proveedores
         Me.pnlContenido.Size = New System.Drawing.Size(1100, 615)
         Me.pnlContenido.TabIndex = 4
         '
-        'lIdCliente
+        'lIdProveedor
         '
-        Me.lIdCliente.AutoSize = True
-        Me.lIdCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.lIdCliente.ForeColor = System.Drawing.Color.White
-        Me.lIdCliente.Location = New System.Drawing.Point(57, 90)
-        Me.lIdCliente.Name = "lIdCliente"
-        Me.lIdCliente.Size = New System.Drawing.Size(15, 16)
-        Me.lIdCliente.TabIndex = 95
-        Me.lIdCliente.Text = "0"
+        Me.lIdProveedor.AutoSize = True
+        Me.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.lIdProveedor.ForeColor = System.Drawing.Color.White
+        Me.lIdProveedor.Location = New System.Drawing.Point(57, 90)
+        Me.lIdProveedor.Name = "lIdProveedor"
+        Me.lIdProveedor.Size = New System.Drawing.Size(15, 16)
+        Me.lIdProveedor.TabIndex = 95
+        Me.lIdProveedor.Text = "0"
         '
         'pCampos
         '
@@ -560,40 +560,18 @@ Partial Class proveedores
         Me.tApellido.Size = New System.Drawing.Size(359, 30)
         Me.tApellido.TabIndex = 4
         '
-        'gridClientes
+        'gridProveedores
         '
-        Me.gridClientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.gridProveedores.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gridClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ncliente, Me.ApeYNom, Me.cuit})
-        Me.gridClientes.Location = New System.Drawing.Point(630, 100)
-        Me.gridClientes.Name = "gridClientes"
-        Me.gridClientes.ReadOnly = True
-        Me.gridClientes.Size = New System.Drawing.Size(458, 503)
-        Me.gridClientes.TabIndex = 7
-        '
-        'ncliente
-        '
-        Me.ncliente.DataPropertyName = "ncliente"
-        Me.ncliente.HeaderText = "ncliente"
-        Me.ncliente.Name = "ncliente"
-        Me.ncliente.ReadOnly = True
-        Me.ncliente.Visible = False
-        '
-        'ApeYNom
-        '
-        Me.ApeYNom.DataPropertyName = "ApeYNom"
-        Me.ApeYNom.HeaderText = "Apellido y Nombre"
-        Me.ApeYNom.Name = "ApeYNom"
-        Me.ApeYNom.ReadOnly = True
-        '
-        'cuit
-        '
-        Me.cuit.DataPropertyName = "CUIT"
-        Me.cuit.HeaderText = "CUIT"
-        Me.cuit.Name = "cuit"
-        Me.cuit.ReadOnly = True
+        Me.gridProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridProveedores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nproveedor, Me.ApeYNom, Me.cuit})
+        Me.gridProveedores.Location = New System.Drawing.Point(630, 100)
+        Me.gridProveedores.Name = "gridProveedores"
+        Me.gridProveedores.ReadOnly = True
+        Me.gridProveedores.Size = New System.Drawing.Size(458, 503)
+        Me.gridProveedores.TabIndex = 7
         '
         'Label2
         '
@@ -619,11 +597,11 @@ Partial Class proveedores
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(72, 51)
+        Me.Label1.Location = New System.Drawing.Point(59, 51)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(319, 23)
+        Me.Label1.Size = New System.Drawing.Size(343, 23)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Ingrese Nombre para Buscar un Cliente"
+        Me.Label1.Text = "Ingrese Nombre para Buscar un Proveedor"
         '
         'btnBuscar
         '
@@ -662,7 +640,7 @@ Partial Class proveedores
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -672,24 +650,46 @@ Partial Class proveedores
         Me.InicioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.InicioToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.gestion
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
-        'ProveedoresToolStripMenuItem
+        'ClientesToolStripMenuItem
         '
-        Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.ProveedoresToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.proveedorOp2
-        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
+        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.ClientesToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.clientes
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.SalirToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.salir
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'nproveedor
+        '
+        Me.nproveedor.DataPropertyName = "nproveedor"
+        Me.nproveedor.HeaderText = "nproveedor"
+        Me.nproveedor.Name = "nproveedor"
+        Me.nproveedor.ReadOnly = True
+        Me.nproveedor.Visible = False
+        '
+        'ApeYNom
+        '
+        Me.ApeYNom.DataPropertyName = "ApeYNom"
+        Me.ApeYNom.HeaderText = "Apellido y Nombre"
+        Me.ApeYNom.Name = "ApeYNom"
+        Me.ApeYNom.ReadOnly = True
+        '
+        'cuit
+        '
+        Me.cuit.DataPropertyName = "CUIT"
+        Me.cuit.HeaderText = "CUIT"
+        Me.cuit.Name = "cuit"
+        Me.cuit.ReadOnly = True
         '
         'proveedores
         '
@@ -703,6 +703,7 @@ Partial Class proveedores
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximumSize = New System.Drawing.Size(1300, 650)
         Me.MinimumSize = New System.Drawing.Size(1300, 650)
         Me.Name = "proveedores"
         Me.Text = "proveedores"
@@ -718,7 +719,7 @@ Partial Class proveedores
         Me.pnlContenido.PerformLayout()
         Me.pCampos.ResumeLayout(False)
         Me.pCampos.PerformLayout()
-        CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuClientes.ResumeLayout(False)
         Me.menuClientes.PerformLayout()
         Me.ResumeLayout(False)
@@ -740,7 +741,7 @@ Partial Class proveedores
     Friend WithEvents lblSistema As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pnlContenido As Panel
-    Friend WithEvents lIdCliente As Label
+    Friend WithEvents lIdProveedor As Label
     Friend WithEvents pCampos As Panel
     Friend WithEvents tEmail As TextBox
     Friend WithEvents Label15 As Label
@@ -767,10 +768,7 @@ Partial Class proveedores
     Friend WithEvents tNombre As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents tApellido As TextBox
-    Friend WithEvents gridClientes As DataGridView
-    Friend WithEvents ncliente As DataGridViewTextBoxColumn
-    Friend WithEvents ApeYNom As DataGridViewTextBoxColumn
-    Friend WithEvents cuit As DataGridViewTextBoxColumn
+    Friend WithEvents gridProveedores As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label1 As Label
@@ -779,6 +777,9 @@ Partial Class proveedores
     Friend WithEvents menuClientes As MenuStrip
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InicioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents nproveedor As DataGridViewTextBoxColumn
+    Friend WithEvents ApeYNom As DataGridViewTextBoxColumn
+    Friend WithEvents cuit As DataGridViewTextBoxColumn
 End Class
