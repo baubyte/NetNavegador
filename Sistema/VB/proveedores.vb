@@ -240,4 +240,16 @@ Public Class proveedores
             MsgBox("Se Produjo un Error al Querer Guardar los Datos del Proveedor, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", MsgBoxStyle.Information, "Editar Proveedor")
         End If
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim inicio As New inicio
+        inicio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub lblSistema_Click(sender As Object, e As EventArgs) Handles lblSistema.Click
+        Dim inicio As New inicio
+        inicio.Show()
+        Me.Close()
+    End Sub
 End Class

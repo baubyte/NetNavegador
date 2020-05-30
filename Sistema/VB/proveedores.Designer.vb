@@ -248,6 +248,7 @@ Partial Class proveedores
         'lblSistema
         '
         Me.lblSistema.AutoSize = True
+        Me.lblSistema.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblSistema.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSistema.ForeColor = System.Drawing.Color.White
         Me.lblSistema.Location = New System.Drawing.Point(101, 3)
@@ -259,6 +260,7 @@ Partial Class proveedores
         '
         'PictureBox1
         '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.sistema.My.Resources.Resources.gestion
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
@@ -650,7 +652,7 @@ Partial Class proveedores
         Me.InicioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.InicioToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.gestion
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
         'ClientesToolStripMenuItem
@@ -658,7 +660,7 @@ Partial Class proveedores
         Me.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.ClientesToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.clientes
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'SalirToolStripMenuItem
@@ -666,7 +668,7 @@ Partial Class proveedores
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.SalirToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.salir
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'nproveedor

@@ -232,4 +232,16 @@ Public Class clientes
         ambProveedores.Show()
         Me.Close()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim inicio As New inicio
+        inicio.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub lblSistema_Click(sender As Object, e As EventArgs) Handles lblSistema.Click
+        Dim inicio As New inicio
+        inicio.Show()
+        Me.Close()
+    End Sub
 End Class

@@ -24,11 +24,19 @@ Partial Class clientes
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clientes))
         Me.pnlTitulo = New System.Windows.Forms.Panel()
+        Me.pRestaurar = New System.Windows.Forms.PictureBox()
+        Me.pMini = New System.Windows.Forms.PictureBox()
+        Me.pMaxi = New System.Windows.Forms.PictureBox()
+        Me.pCerrar = New System.Windows.Forms.PictureBox()
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.lblSistema = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlContenido = New System.Windows.Forms.Panel()
         Me.lIdCliente = New System.Windows.Forms.Label()
         Me.pCampos = New System.Windows.Forms.Panel()
@@ -68,33 +76,25 @@ Partial Class clientes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.tBuscar = New System.Windows.Forms.TextBox()
         Me.menuClientes = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pRestaurar = New System.Windows.Forms.PictureBox()
-        Me.pMini = New System.Windows.Forms.PictureBox()
-        Me.pMaxi = New System.Windows.Forms.PictureBox()
-        Me.pCerrar = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.pnlTitulo.SuspendLayout()
-        Me.pnlMenu.SuspendLayout()
-        Me.pnlContenido.SuspendLayout()
-        Me.pCampos.SuspendLayout()
-        CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.menuClientes.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlMenu.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlContenido.SuspendLayout()
+        Me.pCampos.SuspendLayout()
+        CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.menuClientes.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlTitulo
@@ -109,6 +109,51 @@ Partial Class clientes
         Me.pnlTitulo.Name = "pnlTitulo"
         Me.pnlTitulo.Size = New System.Drawing.Size(1300, 35)
         Me.pnlTitulo.TabIndex = 1
+        '
+        'pRestaurar
+        '
+        Me.pRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pRestaurar.Image = Global.sistema.My.Resources.Resources.restore
+        Me.pRestaurar.Location = New System.Drawing.Point(1218, 3)
+        Me.pRestaurar.Name = "pRestaurar"
+        Me.pRestaurar.Size = New System.Drawing.Size(32, 32)
+        Me.pRestaurar.TabIndex = 3
+        Me.pRestaurar.TabStop = False
+        Me.pRestaurar.Visible = False
+        '
+        'pMini
+        '
+        Me.pMini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pMini.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pMini.Image = Global.sistema.My.Resources.Resources.minimize
+        Me.pMini.Location = New System.Drawing.Point(1180, 3)
+        Me.pMini.Name = "pMini"
+        Me.pMini.Size = New System.Drawing.Size(32, 32)
+        Me.pMini.TabIndex = 2
+        Me.pMini.TabStop = False
+        '
+        'pMaxi
+        '
+        Me.pMaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pMaxi.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pMaxi.Image = Global.sistema.My.Resources.Resources.maximize
+        Me.pMaxi.Location = New System.Drawing.Point(1218, 3)
+        Me.pMaxi.Name = "pMaxi"
+        Me.pMaxi.Size = New System.Drawing.Size(32, 32)
+        Me.pMaxi.TabIndex = 1
+        Me.pMaxi.TabStop = False
+        '
+        'pCerrar
+        '
+        Me.pCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pCerrar.Image = Global.sistema.My.Resources.Resources.cancel1
+        Me.pCerrar.Location = New System.Drawing.Point(1256, 3)
+        Me.pCerrar.Name = "pCerrar"
+        Me.pCerrar.Size = New System.Drawing.Size(32, 32)
+        Me.pCerrar.TabIndex = 0
+        Me.pCerrar.TabStop = False
         '
         'pnlMenu
         '
@@ -135,6 +180,24 @@ Partial Class clientes
         Me.Panel3.Size = New System.Drawing.Size(8, 64)
         Me.Panel3.TabIndex = 7
         '
+        'btnBorrar
+        '
+        Me.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBorrar.FlatAppearance.BorderSize = 0
+        Me.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrar.ForeColor = System.Drawing.Color.White
+        Me.btnBorrar.Image = Global.sistema.My.Resources.Resources.delete_delete_delete
+        Me.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBorrar.Location = New System.Drawing.Point(12, 325)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(185, 64)
+        Me.btnBorrar.TabIndex = 6
+        Me.btnBorrar.Text = "&Borrar Cliente"
+        Me.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -142,6 +205,24 @@ Partial Class clientes
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(8, 64)
         Me.Panel2.TabIndex = 5
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnNuevo.FlatAppearance.BorderSize = 0
+        Me.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.sistema.My.Resources.Resources.new_add_user
+        Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNuevo.Location = New System.Drawing.Point(12, 253)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(185, 64)
+        Me.btnNuevo.TabIndex = 4
+        Me.btnNuevo.Text = "&Nuevo Cliente"
+        Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -151,9 +232,28 @@ Partial Class clientes
         Me.Panel1.Size = New System.Drawing.Size(8, 64)
         Me.Panel1.TabIndex = 3
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Image = Global.sistema.My.Resources.Resources.Save_37110
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(12, 179)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(185, 64)
+        Me.btnGuardar.TabIndex = 0
+        Me.btnGuardar.Text = "&Guardar "
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
         'lblSistema
         '
         Me.lblSistema.AutoSize = True
+        Me.lblSistema.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblSistema.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSistema.ForeColor = System.Drawing.Color.White
         Me.lblSistema.Location = New System.Drawing.Point(101, 3)
@@ -162,6 +262,17 @@ Partial Class clientes
         Me.lblSistema.TabIndex = 0
         Me.lblSistema.Text = "Sistema " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Gestion"
         Me.lblSistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.sistema.My.Resources.Resources.gestion
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(86, 81)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'pnlContenido
         '
@@ -561,6 +672,22 @@ Partial Class clientes
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Ingrese Nombre para Buscar un Cliente"
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Image = Global.sistema.My.Resources.Resources.buscar
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(844, 46)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(191, 38)
+        Me.btnBuscar.TabIndex = 5
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
         'tBuscar
         '
         Me.tBuscar.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -587,28 +714,12 @@ Partial Class clientes
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatAppearance.BorderSize = 0
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Image = Global.sistema.My.Resources.Resources.buscar
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(844, 46)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(191, 38)
-        Me.btnBuscar.TabIndex = 5
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'InicioToolStripMenuItem
         '
         Me.InicioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.InicioToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.gestion
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
         'ProveedoresToolStripMenuItem
@@ -616,7 +727,7 @@ Partial Class clientes
         Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.ProveedoresToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.proveedorOp2
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'SalirToolStripMenuItem
@@ -624,117 +735,8 @@ Partial Class clientes
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.SalirToolStripMenuItem.Image = Global.sistema.My.Resources.Resources.salir
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBorrar.FlatAppearance.BorderSize = 0
-        Me.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBorrar.ForeColor = System.Drawing.Color.White
-        Me.btnBorrar.Image = Global.sistema.My.Resources.Resources.delete_delete_delete
-        Me.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBorrar.Location = New System.Drawing.Point(12, 325)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(185, 64)
-        Me.btnBorrar.TabIndex = 6
-        Me.btnBorrar.Text = "&Borrar Cliente"
-        Me.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNuevo.FlatAppearance.BorderSize = 0
-        Me.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.ForeColor = System.Drawing.Color.White
-        Me.btnNuevo.Image = Global.sistema.My.Resources.Resources.new_add_user
-        Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(12, 253)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(185, 64)
-        Me.btnNuevo.TabIndex = 4
-        Me.btnNuevo.Text = "&Nuevo Cliente"
-        Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnNuevo.UseVisualStyleBackColor = True
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGuardar.FlatAppearance.BorderSize = 0
-        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Image = Global.sistema.My.Resources.Resources.Save_37110
-        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(12, 179)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(185, 64)
-        Me.btnGuardar.TabIndex = 0
-        Me.btnGuardar.Text = "&Guardar "
-        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.sistema.My.Resources.Resources.gestion
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(86, 81)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'pRestaurar
-        '
-        Me.pRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pRestaurar.Image = Global.sistema.My.Resources.Resources.restore
-        Me.pRestaurar.Location = New System.Drawing.Point(1218, 3)
-        Me.pRestaurar.Name = "pRestaurar"
-        Me.pRestaurar.Size = New System.Drawing.Size(32, 32)
-        Me.pRestaurar.TabIndex = 3
-        Me.pRestaurar.TabStop = False
-        Me.pRestaurar.Visible = False
-        '
-        'pMini
-        '
-        Me.pMini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pMini.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pMini.Image = Global.sistema.My.Resources.Resources.minimize
-        Me.pMini.Location = New System.Drawing.Point(1180, 3)
-        Me.pMini.Name = "pMini"
-        Me.pMini.Size = New System.Drawing.Size(32, 32)
-        Me.pMini.TabIndex = 2
-        Me.pMini.TabStop = False
-        '
-        'pMaxi
-        '
-        Me.pMaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pMaxi.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pMaxi.Image = Global.sistema.My.Resources.Resources.maximize
-        Me.pMaxi.Location = New System.Drawing.Point(1218, 3)
-        Me.pMaxi.Name = "pMaxi"
-        Me.pMaxi.Size = New System.Drawing.Size(32, 32)
-        Me.pMaxi.TabIndex = 1
-        Me.pMaxi.TabStop = False
-        '
-        'pCerrar
-        '
-        Me.pCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pCerrar.Image = Global.sistema.My.Resources.Resources.cancel1
-        Me.pCerrar.Location = New System.Drawing.Point(1256, 3)
-        Me.pCerrar.Name = "pCerrar"
-        Me.pCerrar.Size = New System.Drawing.Size(32, 32)
-        Me.pCerrar.TabIndex = 0
-        Me.pCerrar.TabStop = False
         '
         'clientes
         '
@@ -753,8 +755,13 @@ Partial Class clientes
         Me.Name = "clientes"
         Me.Text = "clientes"
         Me.pnlTitulo.ResumeLayout(False)
+        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pMini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMenu.ResumeLayout(False)
         Me.pnlMenu.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlContenido.ResumeLayout(False)
         Me.pnlContenido.PerformLayout()
         Me.pCampos.ResumeLayout(False)
@@ -762,11 +769,6 @@ Partial Class clientes
         CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.menuClientes.ResumeLayout(False)
         Me.menuClientes.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pMini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
