@@ -22,6 +22,7 @@ Partial Class inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
         Me.pnlTitulo = New System.Windows.Forms.Panel()
         Me.pRestaurar = New System.Windows.Forms.PictureBox()
         Me.pMini = New System.Windows.Forms.PictureBox()
@@ -33,7 +34,7 @@ Partial Class inicio
         Me.lblSistema = New System.Windows.Forms.Label()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnProvvedores = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnSalri = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -157,6 +158,7 @@ Partial Class inicio
         '
         'btnClientes
         '
+        Me.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClientes.FlatAppearance.BorderSize = 0
         Me.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -164,9 +166,9 @@ Partial Class inicio
         Me.btnClientes.ForeColor = System.Drawing.Color.White
         Me.btnClientes.Image = Global.sistema.My.Resources.Resources.clientes
         Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClientes.Location = New System.Drawing.Point(6, 123)
+        Me.btnClientes.Location = New System.Drawing.Point(12, 123)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Size = New System.Drawing.Size(191, 38)
+        Me.btnClientes.Size = New System.Drawing.Size(185, 38)
         Me.btnClientes.TabIndex = 0
         Me.btnClientes.Text = "Clientes"
         Me.btnClientes.UseVisualStyleBackColor = True
@@ -179,32 +181,34 @@ Partial Class inicio
         Me.Panel1.Size = New System.Drawing.Size(8, 38)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'btnProvvedores
         '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.sistema.My.Resources.Resources.proveedorOp2
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(6, 178)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(191, 38)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Proveedores"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnProvvedores.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnProvvedores.FlatAppearance.BorderSize = 0
+        Me.btnProvvedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnProvvedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProvvedores.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProvvedores.ForeColor = System.Drawing.Color.White
+        Me.btnProvvedores.Image = Global.sistema.My.Resources.Resources.proveedorOp2
+        Me.btnProvvedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnProvvedores.Location = New System.Drawing.Point(12, 167)
+        Me.btnProvvedores.Name = "btnProvvedores"
+        Me.btnProvvedores.Size = New System.Drawing.Size(185, 38)
+        Me.btnProvvedores.TabIndex = 2
+        Me.btnProvvedores.Text = "Proveedores"
+        Me.btnProvvedores.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(3, 178)
+        Me.Panel2.Location = New System.Drawing.Point(3, 167)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(8, 38)
         Me.Panel2.TabIndex = 1
         '
         'btnSalri
         '
+        Me.btnSalri.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSalri.FlatAppearance.BorderSize = 0
         Me.btnSalri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btnSalri.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -212,9 +216,9 @@ Partial Class inicio
         Me.btnSalri.ForeColor = System.Drawing.Color.White
         Me.btnSalri.Image = Global.sistema.My.Resources.Resources.salir
         Me.btnSalri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalri.Location = New System.Drawing.Point(6, 288)
+        Me.btnSalri.Location = New System.Drawing.Point(12, 211)
         Me.btnSalri.Name = "btnSalri"
-        Me.btnSalri.Size = New System.Drawing.Size(191, 38)
+        Me.btnSalri.Size = New System.Drawing.Size(185, 38)
         Me.btnSalri.TabIndex = 4
         Me.btnSalri.Text = "Salir"
         Me.btnSalri.UseVisualStyleBackColor = True
@@ -222,7 +226,7 @@ Partial Class inicio
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(3, 288)
+        Me.Panel3.Location = New System.Drawing.Point(3, 211)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(8, 38)
         Me.Panel3.TabIndex = 3
@@ -233,7 +237,7 @@ Partial Class inicio
         Me.pnlMenu.Controls.Add(Me.Panel3)
         Me.pnlMenu.Controls.Add(Me.btnSalri)
         Me.pnlMenu.Controls.Add(Me.Panel2)
-        Me.pnlMenu.Controls.Add(Me.Button1)
+        Me.pnlMenu.Controls.Add(Me.btnProvvedores)
         Me.pnlMenu.Controls.Add(Me.Panel1)
         Me.pnlMenu.Controls.Add(Me.btnClientes)
         Me.pnlMenu.Controls.Add(Me.lblSistema)
@@ -253,6 +257,7 @@ Partial Class inicio
         Me.Controls.Add(Me.pnlMenu)
         Me.Controls.Add(Me.pnlTitulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "inicio"
         Me.Text = "Inicio Sistema"
         Me.pnlTitulo.ResumeLayout(False)
@@ -280,7 +285,7 @@ Partial Class inicio
     Friend WithEvents lblSistema As Label
     Friend WithEvents btnClientes As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnProvvedores As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnSalri As Button
     Friend WithEvents Panel3 As Panel

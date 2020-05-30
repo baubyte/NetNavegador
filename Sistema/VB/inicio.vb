@@ -55,4 +55,10 @@ Public Class inicio
         abmClientes.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnProvvedores_Click(sender As Object, e As EventArgs) Handles btnProvvedores.Click
+        Dim abmProveedores As New proveedores
+        abmProveedores.Show()
+        Me.Close()
+    End Sub
 End Class

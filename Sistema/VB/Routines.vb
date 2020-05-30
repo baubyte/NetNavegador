@@ -74,7 +74,7 @@ Module Routines
             'Capturamos el Error
         Catch ex As Exception
             'Mostaramos el Error y Devolvemos False en la salida es decir que todo salio mal
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
             salida = False
         End Try
         'Cerramos la Conexion y Devolvemos True en la salida es decir que todo salio bien

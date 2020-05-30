@@ -73,7 +73,6 @@ Public Class clientes
             gridClientes.Visible = False
             pCampos.Visible = False
             lIdCliente.Visible = False
-            pCampos.Visible = False
             btnGuardar.Visible = False
             btnBorrar.Visible = False
             Panel1.Visible = False
@@ -109,7 +108,7 @@ Public Class clientes
             MsgBox("Hubo un Error al intentar Borrar el Cliente, Reintente, y Si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", MsgBoxStyle.Information, "Eliminar Cliente")
         Else
             buscar(" NCliente=" & Val(lIdCliente.Text))
-            MsgBox("El Cliente fue ELIMINADO de la Base de Datos.")
+            MsgBox("El Cliente fue ELIMINADO de la Base de Datos.", MsgBoxStyle.Information, "Eliminar Cliente")
         End If
     End Sub
     'Filtro al Hacer Click en una fila
@@ -124,7 +123,6 @@ Public Class clientes
     Sub FilaClick(ByVal e As Object)
         Dim fila As Integer = e.RowIndex
         Dim tfila As String
-
         If IsNothing(gridClientes.Rows(fila).Cells(0).Value) Then
             lIdCliente.Text = "0"
             btnGuardar.Visible = False
@@ -138,6 +136,13 @@ Public Class clientes
         Else
             tfila = gridClientes.Rows(fila).Cells(0).Value
             lIdCliente.Text = tfila.ToString()
+            btnGuardar.Visible = True
+            btnBorrar.Visible = True
+            btnNuevo.Visible = True
+            pCampos.Visible = True
+            Panel1.Visible = True
+            Panel2.Visible = True
+            Panel3.Visible = True
             CargarCamposClientes()
         End If
     End Sub
@@ -185,6 +190,46 @@ Public Class clientes
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        'Para Guardar los Errores que Surjan
+        Dim errores As String = ""
+        'Guardamos el caracter del enter
+        Dim enter As String = vbCrLf
+        If tApellido.Text.Trim.Length < 3 Then
+            errores &= "Debe Completar el o los Apellido del Cliente." & enter
+        End If
+        If tNombre.Text.Trim.Length < 3 Then
+            errores &= "Debe Completar el o los Nombre deL Cliente." & enter
+        End If
+        If tUsuario.Text.Trim.Length < 3 Then
+            errores &= "Debe Completar el Usuario." & enter
+        End If
+        If tClave.Text.Trim.Length < 6 Then
+            errores &= "Debe Completar la Clave." & enter
+        End If
+        tDNI.Text = Val(tDNI.Text.Trim.Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", ""))
+        If tDNI.Text.Trim.Length < 4 Or tDNI.Text.IndexOf("11111") > -1 Or tCUIT.Text.IndexOf("12345") > -1 Or tDNI.Text.IndexOf("000000") > -1 Then
+            errores &= "Debe completar CORRECTAMENTE el Numero de DNI." & enter
+        End If
+        tCUIT.Text = Val(tCUIT.Text.Trim.Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", ""))
+        If tCUIT.Text.Trim.Length < 4 Or tCUIT.Text.IndexOf("11111") > -1 Or tCUIT.Text.IndexOf("12345") > -1 Or tCUIT.Text.IndexOf("000000") > -1 Then
+            errores &= "Debe completar CORRECTAMENTE el Numero de CUIT." & enter
+        End If
+        If errores.Length > 0 Then
+            MsgBox("Hubo errores, Por Favor Verifique y Corrija Antes de Intentar de Nuevo:" & enter & enter & errores, MsgBoxStyle.Information, "Erores")
+            Exit Sub
+        End If
+        'Ejecutamos el Update
+        If SqlAccion("UPDATE Clientes SET ClaveCliente ='" & tClave.Text & "' , Estado =" & IIf(CheckBox1.Checked, 1, 0) & ", ApellidoCliente='" & tApellido.Text.Trim.ToUpper.Replace("'", "´") & "' , NombreCliente='" & tNombre.Text.Trim.ToUpper.Replace("'", "´") & "', DocumentoCliente=" & Val(tDNI.Text.Trim.Replace(".", "").Replace(" ", "").Replace(",", "")) & ", CuitCliente =" & Val(tCUIT.Text.Trim.Replace(".", "").Replace(" ", "").Replace(",", "")) & ", UsuarioCliente='" & tUsuario.Text.Trim.ToUpper.Replace("'", "´") & "', DomicilioCliente='" & tDireccion.Text.Trim.ToUpper.Replace("'", "´") & "', ProvinciaCliente='" & tProvincia.Text.Trim.ToUpper.Replace("'", "´") & "', LocalidadCliente='" & tLocalidad.Text.Trim.ToUpper.Replace("'", "´") & "', PostalCliente='" & tCP.Text.Trim.ToUpper.Replace("'", "´") & "', EMailCliente='" & tEmail.Text.Trim.ToUpper.Replace("'", "´") & "', FechaNacimientoCliente=" & FechaSql(DateTimePicker1.Value) & ", TelefonoCliente=" & Val(tTelefono.Text.Trim.Replace(".", "").Replace(" ", "").Replace(",", "")) & ", ComentariosCliente='" & tComentario.Text.Trim.ToUpper.Replace("'", "´") & "' WHERE NCliente=" & Vnum(lIdCliente.Text)) = True Then
+            MsgBox("Cambios Realizados Correctamente.", MsgBoxStyle.Information, "Editar Cliente")
+            buscar(" NCliente=" & Vnum(lIdCliente.Text))
+        Else
+            MsgBox("Se Produjo un Error al Querer Guardar los Datos del Cliente, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", MsgBoxStyle.Information, "Editar Cliente")
+        End If
+    End Sub
 
+    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
+        Dim ambProveedores As New proveedores
+        ambProveedores.Show()
+        Me.Close()
     End Sub
 End Class
