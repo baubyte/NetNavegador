@@ -88,6 +88,12 @@
       <DependentUpon>inicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -188,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gestionSis.ico" />
+    <None Include="Resources\security-protection-protect-key-password-login_108554.ico" />
+    <None Include="Resources\loginmanager_10029.ico" />
+    <None Include="Resources\Login_37128.ico" />
     <None Include="Resources\delivery_truck_icon_129109.ico" />
     <None Include="Resources\delivery-truck_icon-icons.com_72248.ico" />
     <None Include="Resources\delivery_truck_icon_129545.ico" />

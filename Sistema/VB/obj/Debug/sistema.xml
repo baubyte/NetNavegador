@@ -67,6 +67,16 @@ sistema
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:sistema.My.Resources.Resources.Login_37128">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:sistema.My.Resources.Resources.loginmanager_10029">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:sistema.My.Resources.Resources.maximize">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -113,6 +123,11 @@ sistema
 </summary>
 </member>
 <member name="P:sistema.My.Resources.Resources.savetheapplication_guardar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:sistema.My.Resources.Resources.security_protection_protect_key_password_login_108554">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

@@ -391,7 +391,7 @@ Partial Class clientes
         'tUsuario
         '
         Me.tUsuario.Location = New System.Drawing.Point(117, 187)
-        Me.tUsuario.MaxLength = 30
+        Me.tUsuario.MaxLength = 10
         Me.tUsuario.Name = "tUsuario"
         Me.tUsuario.Size = New System.Drawing.Size(359, 30)
         Me.tUsuario.TabIndex = 41

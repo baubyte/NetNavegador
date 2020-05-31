@@ -36,7 +36,7 @@ Partial Class inicio
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnProvvedores = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnSalri = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.pnlTitulo.SuspendLayout()
@@ -206,22 +206,22 @@ Partial Class inicio
         Me.Panel2.Size = New System.Drawing.Size(8, 38)
         Me.Panel2.TabIndex = 1
         '
-        'btnSalri
+        'btnSalir
         '
-        Me.btnSalri.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSalri.FlatAppearance.BorderSize = 0
-        Me.btnSalri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnSalri.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalri.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalri.ForeColor = System.Drawing.Color.White
-        Me.btnSalri.Image = Global.sistema.My.Resources.Resources.salir
-        Me.btnSalri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalri.Location = New System.Drawing.Point(12, 211)
-        Me.btnSalri.Name = "btnSalri"
-        Me.btnSalri.Size = New System.Drawing.Size(185, 38)
-        Me.btnSalri.TabIndex = 4
-        Me.btnSalri.Text = "Salir"
-        Me.btnSalri.UseVisualStyleBackColor = True
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSalir.FlatAppearance.BorderSize = 0
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Image = Global.sistema.My.Resources.Resources.salir
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.Location = New System.Drawing.Point(12, 211)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(185, 38)
+        Me.btnSalir.TabIndex = 4
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -235,7 +235,7 @@ Partial Class inicio
         '
         Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.pnlMenu.Controls.Add(Me.Panel3)
-        Me.pnlMenu.Controls.Add(Me.btnSalri)
+        Me.pnlMenu.Controls.Add(Me.btnSalir)
         Me.pnlMenu.Controls.Add(Me.Panel2)
         Me.pnlMenu.Controls.Add(Me.btnProvvedores)
         Me.pnlMenu.Controls.Add(Me.Panel1)
@@ -287,7 +287,7 @@ Partial Class inicio
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnProvvedores As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents btnSalri As Button
+    Friend WithEvents btnSalir As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents pnlMenu As Panel
 End Class

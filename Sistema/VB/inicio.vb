@@ -46,8 +46,10 @@ Public Class inicio
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnSalri.Click
-        Application.ExitThread()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Dim login As New login
+        login.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click

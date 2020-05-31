@@ -51,7 +51,9 @@ Public Class clientes
     End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Application.ExitThread()
+        Dim login As New login
+        login.Show()
+        Me.Close()
     End Sub
 
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
