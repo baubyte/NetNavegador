@@ -84,6 +84,8 @@
             // 
             this.gridClientes.AllowUserToDeleteRows = false;
             this.gridClientes.AllowUserToOrderColumns = true;
+            this.gridClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.gridClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -174,6 +176,8 @@
             // 
             // tBuscar
             // 
+            this.tBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBuscar.Location = new System.Drawing.Point(559, 32);
             this.tBuscar.Name = "tBuscar";
@@ -182,6 +186,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -192,7 +197,7 @@
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
             this.btnBuscar.IconColor = System.Drawing.Color.White;
             this.btnBuscar.IconSize = 32;
-            this.btnBuscar.Location = new System.Drawing.Point(889, 23);
+            this.btnBuscar.Location = new System.Drawing.Point(899, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Rotation = 0D;
             this.btnBuscar.Size = new System.Drawing.Size(110, 47);
@@ -205,15 +210,16 @@
             // 
             // pnlBordeBuscar
             // 
+            this.pnlBordeBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBordeBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pnlBordeBuscar.Location = new System.Drawing.Point(883, 23);
+            this.pnlBordeBuscar.Location = new System.Drawing.Point(893, 23);
             this.pnlBordeBuscar.Name = "pnlBordeBuscar";
             this.pnlBordeBuscar.Size = new System.Drawing.Size(8, 47);
             this.pnlBordeBuscar.TabIndex = 77;
             // 
             // pnlBordeNuevo
             // 
-            this.pnlBordeNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(253)))), ((int)(((byte)(114)))));
             this.pnlBordeNuevo.Location = new System.Drawing.Point(591, 349);
             this.pnlBordeNuevo.Name = "pnlBordeNuevo";
@@ -222,7 +228,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -246,7 +252,7 @@
             // 
             // pnlBordeEditar
             // 
-            this.pnlBordeEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlBordeEditar.Location = new System.Drawing.Point(735, 349);
             this.pnlBordeEditar.Name = "pnlBordeEditar";
@@ -255,7 +261,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -279,7 +285,7 @@
             // 
             // pnlBordeBorrar
             // 
-            this.pnlBordeBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeBorrar.BackColor = System.Drawing.Color.Red;
             this.pnlBordeBorrar.Location = new System.Drawing.Point(881, 349);
             this.pnlBordeBorrar.Name = "pnlBordeBorrar";
@@ -288,7 +294,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));

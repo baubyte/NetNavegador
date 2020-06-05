@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
-            this.lIdCliente = new System.Windows.Forms.Label();
+            this.lIdProveedor = new System.Windows.Forms.Label();
             this.pnlBordeBuscar = new System.Windows.Forms.Panel();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.Label2 = new System.Windows.Forms.Label();
@@ -48,30 +48,57 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.pnlBordeNuevo = new System.Windows.Forms.Panel();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.tEmail = new System.Windows.Forms.TextBox();
+            this.Label15 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.tCUIT = new System.Windows.Forms.TextBox();
+            this.CheckBox1 = new System.Windows.Forms.CheckBox();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.tLocalidad = new System.Windows.Forms.TextBox();
+            this.Label16 = new System.Windows.Forms.Label();
+            this.tComentario = new System.Windows.Forms.TextBox();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.tTelefono = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.tProvincia = new System.Windows.Forms.TextBox();
+            this.Label9 = new System.Windows.Forms.Label();
+            this.tCP = new System.Windows.Forms.TextBox();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.tDireccion = new System.Windows.Forms.TextBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.tDNI = new System.Windows.Forms.TextBox();
+            this.Label5 = new System.Windows.Forms.Label();
+            this.tNombre = new System.Windows.Forms.TextBox();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.tApellido = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridProveedores)).BeginInit();
             this.SuspendLayout();
             // 
-            // lIdCliente
+            // lIdProveedor
             // 
-            this.lIdCliente.AutoSize = true;
-            this.lIdCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.lIdCliente.ForeColor = System.Drawing.Color.White;
-            this.lIdCliente.Location = new System.Drawing.Point(534, 63);
-            this.lIdCliente.Name = "lIdCliente";
-            this.lIdCliente.Size = new System.Drawing.Size(15, 16);
-            this.lIdCliente.TabIndex = 102;
-            this.lIdCliente.Text = "0";
+            this.lIdProveedor.AutoSize = true;
+            this.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.lIdProveedor.ForeColor = System.Drawing.Color.White;
+            this.lIdProveedor.Location = new System.Drawing.Point(534, 63);
+            this.lIdProveedor.Name = "lIdProveedor";
+            this.lIdProveedor.Size = new System.Drawing.Size(15, 16);
+            this.lIdProveedor.TabIndex = 102;
+            this.lIdProveedor.Text = "0";
             // 
             // pnlBordeBuscar
             // 
+            this.pnlBordeBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBordeBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pnlBordeBuscar.Location = new System.Drawing.Point(883, 23);
+            this.pnlBordeBuscar.Location = new System.Drawing.Point(893, 23);
             this.pnlBordeBuscar.Name = "pnlBordeBuscar";
             this.pnlBordeBuscar.Size = new System.Drawing.Size(8, 47);
             this.pnlBordeBuscar.TabIndex = 101;
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -82,7 +109,7 @@
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
             this.btnBuscar.IconColor = System.Drawing.Color.White;
             this.btnBuscar.IconSize = 32;
-            this.btnBuscar.Location = new System.Drawing.Point(889, 23);
+            this.btnBuscar.Location = new System.Drawing.Point(899, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Rotation = 0D;
             this.btnBuscar.Size = new System.Drawing.Size(110, 47);
@@ -91,6 +118,7 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Label2
             // 
@@ -116,6 +144,8 @@
             // 
             // tBuscar
             // 
+            this.tBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBuscar.Location = new System.Drawing.Point(559, 32);
             this.tBuscar.Name = "tBuscar";
@@ -126,7 +156,7 @@
             // 
             this.gridProveedores.AllowUserToDeleteRows = false;
             this.gridProveedores.AllowUserToOrderColumns = true;
-            this.gridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridProveedores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
@@ -169,6 +199,8 @@
             this.gridProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridProveedores.Size = new System.Drawing.Size(508, 239);
             this.gridProveedores.TabIndex = 103;
+            this.gridProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProveedores_CellContentClick);
+            this.gridProveedores.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProveedores_CellEnter);
             // 
             // nproveedor
             // 
@@ -194,7 +226,7 @@
             // 
             // pnlBordeBorrar
             // 
-            this.pnlBordeBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeBorrar.BackColor = System.Drawing.Color.Red;
             this.pnlBordeBorrar.Location = new System.Drawing.Point(881, 349);
             this.pnlBordeBorrar.Name = "pnlBordeBorrar";
@@ -203,7 +235,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -223,10 +255,11 @@
             this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // pnlBordeEditar
             // 
-            this.pnlBordeEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlBordeEditar.Location = new System.Drawing.Point(735, 349);
             this.pnlBordeEditar.Name = "pnlBordeEditar";
@@ -235,7 +268,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -255,10 +288,11 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // pnlBordeNuevo
             // 
-            this.pnlBordeNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlBordeNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBordeNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(253)))), ((int)(((byte)(114)))));
             this.pnlBordeNuevo.Location = new System.Drawing.Point(591, 349);
             this.pnlBordeNuevo.Name = "pnlBordeNuevo";
@@ -267,7 +301,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -287,6 +321,286 @@
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // tEmail
+            // 
+            this.tEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tEmail.Location = new System.Drawing.Point(135, 347);
+            this.tEmail.MaxLength = 35;
+            this.tEmail.Name = "tEmail";
+            this.tEmail.Size = new System.Drawing.Size(373, 23);
+            this.tEmail.TabIndex = 134;
+            // 
+            // Label15
+            // 
+            this.Label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label15.AutoSize = true;
+            this.Label15.ForeColor = System.Drawing.Color.White;
+            this.Label15.Location = new System.Drawing.Point(356, 238);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(26, 16);
+            this.Label15.TabIndex = 133;
+            this.Label15.Text = "CP:";
+            // 
+            // Label7
+            // 
+            this.Label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label7.AutoSize = true;
+            this.Label7.ForeColor = System.Drawing.Color.White;
+            this.Label7.Location = new System.Drawing.Point(25, 166);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(101, 16);
+            this.Label7.TabIndex = 132;
+            this.Label7.Text = "CUIT (solo núm.)";
+            // 
+            // tCUIT
+            // 
+            this.tCUIT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tCUIT.Location = new System.Drawing.Point(172, 163);
+            this.tCUIT.MaxLength = 30;
+            this.tCUIT.Name = "tCUIT";
+            this.tCUIT.Size = new System.Drawing.Size(322, 23);
+            this.tCUIT.TabIndex = 131;
+            // 
+            // CheckBox1
+            // 
+            this.CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.CheckBox1.AutoSize = true;
+            this.CheckBox1.ForeColor = System.Drawing.Color.White;
+            this.CheckBox1.Location = new System.Drawing.Point(408, 127);
+            this.CheckBox1.Name = "CheckBox1";
+            this.CheckBox1.Size = new System.Drawing.Size(66, 20);
+            this.CheckBox1.TabIndex = 130;
+            this.CheckBox1.Text = "Activo?";
+            this.CheckBox1.UseVisualStyleBackColor = true;
+            // 
+            // Label3
+            // 
+            this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label3.AutoSize = true;
+            this.Label3.ForeColor = System.Drawing.Color.White;
+            this.Label3.Location = new System.Drawing.Point(25, 277);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(59, 16);
+            this.Label3.TabIndex = 129;
+            this.Label3.Text = "Provincia:";
+            // 
+            // tLocalidad
+            // 
+            this.tLocalidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tLocalidad.Location = new System.Drawing.Point(121, 235);
+            this.tLocalidad.MaxLength = 20;
+            this.tLocalidad.Name = "tLocalidad";
+            this.tLocalidad.Size = new System.Drawing.Size(232, 23);
+            this.tLocalidad.TabIndex = 128;
+            // 
+            // Label16
+            // 
+            this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label16.AutoSize = true;
+            this.Label16.ForeColor = System.Drawing.Color.White;
+            this.Label16.Location = new System.Drawing.Point(25, 410);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(77, 16);
+            this.Label16.TabIndex = 127;
+            this.Label16.Text = "Comentarios:";
+            // 
+            // tComentario
+            // 
+            this.tComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tComentario.Location = new System.Drawing.Point(135, 383);
+            this.tComentario.MaxLength = 200;
+            this.tComentario.Multiline = true;
+            this.tComentario.Name = "tComentario";
+            this.tComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tComentario.Size = new System.Drawing.Size(373, 89);
+            this.tComentario.TabIndex = 122;
+            // 
+            // Label12
+            // 
+            this.Label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label12.AutoSize = true;
+            this.Label12.ForeColor = System.Drawing.Color.White;
+            this.Label12.Location = new System.Drawing.Point(25, 133);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(125, 16);
+            this.Label12.TabIndex = 126;
+            this.Label12.Text = "Fecha de Nacimiento:";
+            // 
+            // DateTimePicker1
+            // 
+            this.DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateTimePicker1.Location = new System.Drawing.Point(208, 127);
+            this.DateTimePicker1.Name = "DateTimePicker1";
+            this.DateTimePicker1.Size = new System.Drawing.Size(168, 23);
+            this.DateTimePicker1.TabIndex = 119;
+            // 
+            // Label11
+            // 
+            this.Label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label11.AutoSize = true;
+            this.Label11.ForeColor = System.Drawing.Color.White;
+            this.Label11.Location = new System.Drawing.Point(25, 354);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(41, 16);
+            this.Label11.TabIndex = 125;
+            this.Label11.Text = "Email:";
+            // 
+            // tTelefono
+            // 
+            this.tTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tTelefono.Location = new System.Drawing.Point(135, 310);
+            this.tTelefono.MaxLength = 35;
+            this.tTelefono.Name = "tTelefono";
+            this.tTelefono.Size = new System.Drawing.Size(373, 23);
+            this.tTelefono.TabIndex = 118;
+            // 
+            // Label10
+            // 
+            this.Label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label10.AutoSize = true;
+            this.Label10.ForeColor = System.Drawing.Color.White;
+            this.Label10.Location = new System.Drawing.Point(25, 313);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(60, 16);
+            this.Label10.TabIndex = 124;
+            this.Label10.Text = "Teléfono:";
+            // 
+            // tProvincia
+            // 
+            this.tProvincia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tProvincia.Location = new System.Drawing.Point(135, 271);
+            this.tProvincia.MaxLength = 30;
+            this.tProvincia.Name = "tProvincia";
+            this.tProvincia.Size = new System.Drawing.Size(373, 23);
+            this.tProvincia.TabIndex = 117;
+            // 
+            // Label9
+            // 
+            this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label9.AutoSize = true;
+            this.Label9.ForeColor = System.Drawing.Color.White;
+            this.Label9.Location = new System.Drawing.Point(25, 238);
+            this.Label9.Name = "Label9";
+            this.Label9.Size = new System.Drawing.Size(61, 16);
+            this.Label9.TabIndex = 123;
+            this.Label9.Text = "Localidad:";
+            // 
+            // tCP
+            // 
+            this.tCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tCP.Location = new System.Drawing.Point(395, 235);
+            this.tCP.MaxLength = 10;
+            this.tCP.Name = "tCP";
+            this.tCP.Size = new System.Drawing.Size(99, 23);
+            this.tCP.TabIndex = 116;
+            // 
+            // Label8
+            // 
+            this.Label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label8.AutoSize = true;
+            this.Label8.ForeColor = System.Drawing.Color.White;
+            this.Label8.Location = new System.Drawing.Point(25, 202);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(62, 16);
+            this.Label8.TabIndex = 121;
+            this.Label8.Text = "Dirección:";
+            // 
+            // tDireccion
+            // 
+            this.tDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tDireccion.Location = new System.Drawing.Point(135, 199);
+            this.tDireccion.MaxLength = 50;
+            this.tDireccion.Name = "tDireccion";
+            this.tDireccion.Size = new System.Drawing.Size(359, 23);
+            this.tDireccion.TabIndex = 115;
+            // 
+            // Label6
+            // 
+            this.Label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label6.AutoSize = true;
+            this.Label6.ForeColor = System.Drawing.Color.White;
+            this.Label6.Location = new System.Drawing.Point(25, 94);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(95, 16);
+            this.Label6.TabIndex = 120;
+            this.Label6.Text = "DNI (solo núm.)";
+            // 
+            // tDNI
+            // 
+            this.tDNI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tDNI.Location = new System.Drawing.Point(158, 91);
+            this.tDNI.MaxLength = 8;
+            this.tDNI.Name = "tDNI";
+            this.tDNI.Size = new System.Drawing.Size(336, 23);
+            this.tDNI.TabIndex = 114;
+            // 
+            // Label5
+            // 
+            this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label5.AutoSize = true;
+            this.Label5.ForeColor = System.Drawing.Color.White;
+            this.Label5.Location = new System.Drawing.Point(25, 58);
+            this.Label5.Name = "Label5";
+            this.Label5.Size = new System.Drawing.Size(66, 16);
+            this.Label5.TabIndex = 113;
+            this.Label5.Text = "Nombre/s:";
+            // 
+            // tNombre
+            // 
+            this.tNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tNombre.Location = new System.Drawing.Point(135, 55);
+            this.tNombre.MaxLength = 30;
+            this.tNombre.Name = "tNombre";
+            this.tNombre.Size = new System.Drawing.Size(359, 23);
+            this.tNombre.TabIndex = 112;
+            // 
+            // Label4
+            // 
+            this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label4.AutoSize = true;
+            this.Label4.ForeColor = System.Drawing.Color.White;
+            this.Label4.Location = new System.Drawing.Point(25, 22);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(65, 16);
+            this.Label4.TabIndex = 110;
+            this.Label4.Text = "Apellido/s:";
+            // 
+            // tApellido
+            // 
+            this.tApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tApellido.Location = new System.Drawing.Point(135, 19);
+            this.tApellido.MaxLength = 30;
+            this.tApellido.Name = "tApellido";
+            this.tApellido.Size = new System.Drawing.Size(359, 23);
+            this.tApellido.TabIndex = 111;
             // 
             // Proveedores
             // 
@@ -294,6 +608,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1046, 497);
+            this.Controls.Add(this.tEmail);
+            this.Controls.Add(this.Label15);
+            this.Controls.Add(this.Label7);
+            this.Controls.Add(this.tCUIT);
+            this.Controls.Add(this.CheckBox1);
+            this.Controls.Add(this.Label3);
+            this.Controls.Add(this.tLocalidad);
+            this.Controls.Add(this.Label16);
+            this.Controls.Add(this.tComentario);
+            this.Controls.Add(this.Label12);
+            this.Controls.Add(this.DateTimePicker1);
+            this.Controls.Add(this.Label11);
+            this.Controls.Add(this.tTelefono);
+            this.Controls.Add(this.Label10);
+            this.Controls.Add(this.tProvincia);
+            this.Controls.Add(this.Label9);
+            this.Controls.Add(this.tCP);
+            this.Controls.Add(this.Label8);
+            this.Controls.Add(this.tDireccion);
+            this.Controls.Add(this.Label6);
+            this.Controls.Add(this.tDNI);
+            this.Controls.Add(this.Label5);
+            this.Controls.Add(this.tNombre);
+            this.Controls.Add(this.Label4);
+            this.Controls.Add(this.tApellido);
             this.Controls.Add(this.pnlBordeBorrar);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.pnlBordeEditar);
@@ -301,7 +640,7 @@
             this.Controls.Add(this.pnlBordeNuevo);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gridProveedores);
-            this.Controls.Add(this.lIdCliente);
+            this.Controls.Add(this.lIdProveedor);
             this.Controls.Add(this.pnlBordeBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.Label2);
@@ -312,6 +651,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Proveedores";
             this.Text = "Proveedores";
+            this.Load += new System.EventHandler(this.Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -320,7 +660,7 @@
 
         #endregion
 
-        internal System.Windows.Forms.Label lIdCliente;
+        internal System.Windows.Forms.Label lIdProveedor;
         private System.Windows.Forms.Panel pnlBordeBuscar;
         private FontAwesome.Sharp.IconButton btnBuscar;
         internal System.Windows.Forms.Label Label2;
@@ -336,5 +676,30 @@
         private FontAwesome.Sharp.IconButton btnEditar;
         private System.Windows.Forms.Panel pnlBordeNuevo;
         private FontAwesome.Sharp.IconButton btnNuevo;
+        internal System.Windows.Forms.TextBox tEmail;
+        internal System.Windows.Forms.Label Label15;
+        internal System.Windows.Forms.Label Label7;
+        internal System.Windows.Forms.TextBox tCUIT;
+        internal System.Windows.Forms.CheckBox CheckBox1;
+        internal System.Windows.Forms.Label Label3;
+        internal System.Windows.Forms.TextBox tLocalidad;
+        internal System.Windows.Forms.Label Label16;
+        internal System.Windows.Forms.TextBox tComentario;
+        internal System.Windows.Forms.Label Label12;
+        internal System.Windows.Forms.DateTimePicker DateTimePicker1;
+        internal System.Windows.Forms.Label Label11;
+        internal System.Windows.Forms.TextBox tTelefono;
+        internal System.Windows.Forms.Label Label10;
+        internal System.Windows.Forms.TextBox tProvincia;
+        internal System.Windows.Forms.Label Label9;
+        internal System.Windows.Forms.TextBox tCP;
+        internal System.Windows.Forms.Label Label8;
+        internal System.Windows.Forms.TextBox tDireccion;
+        internal System.Windows.Forms.Label Label6;
+        internal System.Windows.Forms.TextBox tDNI;
+        internal System.Windows.Forms.Label Label5;
+        internal System.Windows.Forms.TextBox tNombre;
+        internal System.Windows.Forms.Label Label4;
+        internal System.Windows.Forms.TextBox tApellido;
     }
 }

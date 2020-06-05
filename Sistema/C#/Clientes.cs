@@ -179,7 +179,7 @@ namespace sistema
             {
                 errores += "Debe completar CORRECTAMENTE el Numero de DNI." + enter;
             }
-            if (routines.YaExisteSql("SELECT DocumentoCliente FROM Clientes WHERE DocumentoCliente =" + tDNI.Text + "AND NCliente != " + lIdCliente.Text) == true)
+            if (routines.YaExisteSql("SELECT DocumentoCliente FROM Clientes WHERE DocumentoCliente =" + routines.Vnum(tDNI.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "AND NCliente != " + routines.Vnum(lIdCliente.Text)) == true)
             {
                 errores += "El DNI Ingresado ya Existe." + enter;
             }
@@ -188,7 +188,7 @@ namespace sistema
             {
                 errores += "Debe completar CORRECTAMENTE el Numero de CUIT." + enter;
             }
-            if (routines.YaExisteSql("SELECT CuitCliente FROM Clientes WHERE CuitCliente =" + tCUIT.Text + "AND NCliente != " + lIdCliente.Text) == true)
+            if (routines.YaExisteSql("SELECT CuitCliente FROM Clientes WHERE CuitCliente ='" + routines.Vnum(tCUIT.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "'AND NCliente != " + routines.Vnum(lIdCliente.Text)) == true)
             {
                 errores += "El CUIT Ingresado ya Existe." + enter;
             }
