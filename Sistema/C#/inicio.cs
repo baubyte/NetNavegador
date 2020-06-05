@@ -47,6 +47,7 @@ namespace sistema
             public static Color color5 = Color.FromArgb(46, 84, 38);
             public static Color color6 = Color.FromArgb(211, 16, 34);
         }
+        #region Metodos Para los Estilos del Formulario
         /**Metodos para Resaltar los Botones*/
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -137,7 +138,10 @@ namespace sistema
         /**Botones de Minimizar Restaurar y Maximizar*/
         private void bntClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
         private void ntnMaximize_Click(object sender, EventArgs e)
         {
@@ -166,7 +170,8 @@ namespace sistema
             else
                 FormBorderStyle = FormBorderStyle.Sizable;
         }
-
+        #endregion
+        #region Botones de Opciones de Menu
         /**Botones del Menu*/
         private void btnProveedores_Click(object sender, EventArgs e)
         {
@@ -178,6 +183,20 @@ namespace sistema
         private void btnSalir_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
+            /**Mostramos el Titulo*/
+            lTitleFormActive.Text = "Salir";
+            if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                if (activeFormChild != null)
+                {
+                    activeFormChild.Close();
+                }
+                Reset();
+            }
         }
 
         private void pLogoTipo_Click(object sender, EventArgs e)
@@ -199,6 +218,8 @@ namespace sistema
             }
             Reset();
         }
+        #endregion
+        #region Metodo para Expandir y Contraer Menu
         /**Metodo para Expandir o Contraer Menu Vertical*/
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -238,9 +259,11 @@ namespace sistema
             else
                 pnlMenu.Width = pnlMenu.Width - 4;
         }
-
+        #endregion
+        /**Para Motrar Fecha y Hora*/
         private void tmFechaHora_Tick(object sender, EventArgs e)
         {
+            lFecha.Text = DateTime.Now.ToLongDateString();
             lHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
     }

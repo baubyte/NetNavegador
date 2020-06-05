@@ -50,7 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lNameUser = new System.Windows.Forms.Label();
             this.iconUser = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lFecha = new System.Windows.Forms.Label();
             this.lHora = new System.Windows.Forms.Label();
             this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
@@ -322,7 +322,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lNameUser);
             this.panel1.Controls.Add(this.iconUser);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lFecha);
             this.panel1.Controls.Add(this.lHora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 476);
@@ -370,17 +370,17 @@
             this.iconUser.TabIndex = 2;
             this.iconUser.TabStop = false;
             // 
-            // label1
+            // lFecha
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(836, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lunes, 1 de Junio de 2020";
+            this.lFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lFecha.AutoSize = true;
+            this.lFecha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lFecha.ForeColor = System.Drawing.Color.White;
+            this.lFecha.Location = new System.Drawing.Point(836, 36);
+            this.lFecha.Name = "lFecha";
+            this.lFecha.Size = new System.Drawing.Size(183, 19);
+            this.lFecha.TabIndex = 1;
+            this.lFecha.Text = "Lunes, 1 de Junio de 2020";
             // 
             // lHora
             // 
@@ -466,7 +466,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer tmFechaHora;
         private System.Windows.Forms.Label lHora;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lFecha;
         private FontAwesome.Sharp.IconPictureBox iconUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lNameUser;
