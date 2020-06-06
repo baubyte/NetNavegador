@@ -247,7 +247,7 @@
             this.btnBorrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnBorrar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.UserTimes;
+            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.ShippingFast;
             this.btnBorrar.IconColor = System.Drawing.Color.White;
             this.btnBorrar.IconSize = 32;
             this.btnBorrar.Location = new System.Drawing.Point(887, 349);
@@ -280,7 +280,7 @@
             this.btnEditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnEditar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.TruckMonster;
             this.btnEditar.IconColor = System.Drawing.Color.White;
             this.btnEditar.IconSize = 32;
             this.btnEditar.Location = new System.Drawing.Point(741, 349);
@@ -313,7 +313,7 @@
             this.btnNuevo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNuevo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Truck;
             this.btnNuevo.IconColor = System.Drawing.Color.White;
             this.btnNuevo.IconSize = 32;
             this.btnNuevo.Location = new System.Drawing.Point(597, 349);
