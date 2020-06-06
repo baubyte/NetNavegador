@@ -540,9 +540,9 @@
             this.CheckBox1.ForeColor = System.Drawing.Color.White;
             this.CheckBox1.Location = new System.Drawing.Point(428, 121);
             this.CheckBox1.Name = "CheckBox1";
-            this.CheckBox1.Size = new System.Drawing.Size(66, 20);
+            this.CheckBox1.Size = new System.Drawing.Size(72, 20);
             this.CheckBox1.TabIndex = 67;
-            this.CheckBox1.Text = "Activo?";
+            this.CheckBox1.Text = "¿Activo?";
             this.CheckBox1.UseVisualStyleBackColor = true;
             // 
             // tCUIT

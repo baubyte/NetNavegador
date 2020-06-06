@@ -113,8 +113,8 @@ namespace sistema
         #region Botones
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            /**Aca me quede
-            if (routines.SqlAccion("INSERT INTO Clientes (ApellidoCliente ,NombreCliente ,DocumentoCliente ,CuitCliente ,UsuarioCliente ,ClaveCliente ,DomicilioCliente ,PostalCliente ,LocalidadCliente ,ProvinciaCliente ,TelefonoCliente ,FechaNacimientoCliente ,ComentariosCliente ,EMailCliente ,Estado) VALUES ('*****', '*****','','','', '', '', '', '', '','', getdate(), '', '', 1)  "))
+
+            if (routines.SqlAccion("INSERT INTO Proveedores (ApellidoProveedor ,NombreProveedor ,DocumentoProveedor ,CuitProveedor,DomicilioProveedor ,PostalProveedor ,LocalidadProveedor ,ProvinciaProveedor ,TelefonoProveedor ,FechaNacimientoProveedor ,ComentariosProveedor ,EMailProveedor ,Estado) VALUES ('*****', '*****','','','','', '', '','', getdate(), '', '', 1)  "))
             {
                 buscar(" ApeYNom LIKE '****%' ");
                 MessageBox.Show("Se ha Creado un Nuevo Registro para el Proveedor que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,12 +123,69 @@ namespace sistema
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            /**Para Guardar los Errores que Surjan*/
+            string errores = "";
+            /**Guardamos el caracter del enter*/
+            string enter = Constants.vbCrLf;
+            if (tApellido.Text.Trim().Length < 3)
+            {
+                errores += "Debe Completar el o los Apellido del Proveedor." + enter;
+            }
+
+            if (tNombre.Text.Trim().Length < 3)
+            {
+                errores += "Debe Completar el o los Nombre del Proveedor." + enter;
+            }
+            tDNI.Text = tDNI.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", "");
+            if (tDNI.Text.Trim().Length < 4 | tDNI.Text.IndexOf("11111") > -1 | tDNI.Text.IndexOf("12345") > -1 | tDNI.Text.IndexOf("000000") > -1)
+            {
+                errores += "Debe completar CORRECTAMENTE el Numero de DNI." + enter;
+            }
+            if (routines.YaExisteSql("SELECT DocumentoProveedor FROM Proveedores WHERE DocumentoProveedor =" + routines.Vnum(tDNI.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "AND NProveedor != " + routines.Vnum(lIdProveedor.Text)) == true)
+            {
+                errores += "El DNI Ingresado ya Existe." + enter;
+            }
+            tCUIT.Text = tCUIT.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", "");
+            if (tCUIT.Text.Trim().Length < 4 | tCUIT.Text.IndexOf("11111") > -1 | tCUIT.Text.IndexOf("12345") > -1 | tCUIT.Text.IndexOf("000000") > -1)
+            {
+                errores += "Debe completar CORRECTAMENTE el Numero de CUIT." + enter;
+            }
+            if (routines.YaExisteSql("SELECT CuitProveedor FROM Proveedores WHERE CuitProveedor ='" + routines.Vnum(tCUIT.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "'AND NProveedor != " + routines.Vnum(lIdProveedor.Text)) == true)
+            {
+                errores += "El CUIT Ingresado ya Existe." + enter;
+            }
+            if (errores.Length > 0)
+            {
+                MessageBox.Show("Hubo errores, Por Favor Verifique y Corrija Antes de Intentar de Nuevo:" + enter + enter + errores, "Errores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            /**Ejecutamos el Update*/
+            if (routines.SqlAccion("UPDATE Proveedores SET Estado =" + (CheckBox1.Checked ? 1 : 0) + ", ApellidoProveedor='" + tApellido.Text.Trim().ToUpper().Replace("'", "´") + "' , NombreProveedor='" + tNombre.Text.Trim().ToUpper().Replace("'", "´") + "', DocumentoProveedor=" + Conversion.Val(tDNI.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", CuitProveedor =" + Conversion.Val(tCUIT.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", DomicilioProveedor='" + tDireccion.Text.Trim().ToUpper().Replace("'", "´") + "', ProvinciaProveedor='" + tProvincia.Text.Trim().ToUpper().Replace("'", "´") + "', LocalidadProveedor='" + tLocalidad.Text.Trim().ToUpper().Replace("'", "´") + "', PostalProveedor='" + tCP.Text.Trim().ToUpper().Replace("'", "´") + "', EMailProveedor='" + tEmail.Text.Trim().ToUpper().Replace("'", "´") + "', FechaNacimientoProveedor=" + routines.FechaSql(DateTimePicker1.Value) + ", TelefonoProveedor=" + Conversion.Val(tTelefono.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", ComentariosProveedor='" + tComentario.Text.Trim().ToUpper().Replace("'", "´") + "' WHERE NProveedor=" + routines.Vnum(lIdProveedor.Text)) == true)
+            {
+                MessageBox.Show("Cambios Realizados Correctamente.", "Editar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buscar(" NProveedor=" + routines.Vnum(lIdProveedor.Text));
+            }
+            else
+            {
+                MessageBox.Show("Se Produjo un Error al Querer Guardar los Datos del Proveedor, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", "Editar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Está por ELIMINAR definitivamente el Proveedor: " + tNombre.Text.Trim().ToUpper() + ", " + tApellido.Text.Trim().ToUpper() + ". Es algo EXTREMO. ¿Está SEGURO?", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.No)
+                return;
+            // Ejecutamos el Delete
+            if (routines.SqlAccion("DELETE FROM Proveedores  WHERE  NProveedor=" + Conversion.Val(lIdProveedor.Text)) == false)
+            {
+                MessageBox.Show("Hubo un Error al intentar Borrar el Proveedor, Reintente, y Si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", "Eliminar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                buscar(" NProveedor=" + Conversion.Val(lIdProveedor.Text));
+                MessageBox.Show("El Proveedor fue ELIMINADO de la Base de Datos.", "Eliminar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
