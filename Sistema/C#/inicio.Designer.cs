@@ -46,6 +46,7 @@
             this.iconFromActive = new FontAwesome.Sharp.IconButton();
             this.pnlShadow = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lNameUser = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.lblInicio = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlLogotipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLogoTipo)).BeginInit();
@@ -319,6 +319,20 @@
             this.pnlContent.Size = new System.Drawing.Size(1062, 536);
             this.pnlContent.TabIndex = 3;
             // 
+            // lblInicio
+            // 
+            this.lblInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.ForeColor = System.Drawing.Color.White;
+            this.lblInicio.Location = new System.Drawing.Point(352, 84);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(400, 266);
+            this.lblInicio.TabIndex = 1;
+            this.lblInicio.Text = "Bienvenido al\r\nSistema de Gestion\r\nde\r\nClientes y Proveedores\r\n\r\nElija Algunas de" +
+    " las Opciones\r\nDisponibles";
+            this.lblInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
@@ -411,20 +425,6 @@
             this.tmFechaHora.Enabled = true;
             this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
             // 
-            // lblInicio
-            // 
-            this.lblInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicio.ForeColor = System.Drawing.Color.White;
-            this.lblInicio.Location = new System.Drawing.Point(352, 84);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(400, 266);
-            this.lblInicio.TabIndex = 1;
-            this.lblInicio.Text = "Bienvenido al\r\nSistema de Gestion\r\nde\r\nClientes y Proveedores\r\n\r\nElija Algunas de" +
-    " las Opciones\r\nDisponibles";
-            this.lblInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -440,6 +440,7 @@
             this.MinimumSize = new System.Drawing.Size(850, 650);
             this.Name = "Inicio";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Resize += new System.EventHandler(this.Inicio_Resize);
             this.pnlMenu.ResumeLayout(false);
