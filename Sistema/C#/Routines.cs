@@ -18,6 +18,9 @@ namespace sistema
     {
         /**Para la Validaciones al Crear Un Nuevo Cliente o Proveedor*/
         internal static bool checkSave { get; set; }
+        /**Para Mostrar el Usuario Logeado*/
+        internal static string  nameUser { get; set; }
+        internal static string lastNameUser { get; set; }
         /**Para la conexión a la dB*/
         public SqlConnection Conectar()
         {

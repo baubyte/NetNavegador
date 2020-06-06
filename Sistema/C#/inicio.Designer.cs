@@ -48,7 +48,7 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.lblInicio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lLastNameUser = new System.Windows.Forms.Label();
             this.lNameUser = new System.Windows.Forms.Label();
             this.iconUser = new FontAwesome.Sharp.IconPictureBox();
             this.lFecha = new System.Windows.Forms.Label();
@@ -224,7 +224,7 @@
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(220, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1062, 65);
+            this.pnlTitulo.Size = new System.Drawing.Size(1064, 65);
             this.pnlTitulo.TabIndex = 1;
             this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseDown);
             // 
@@ -236,7 +236,7 @@
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconSize = 22;
-            this.btnMinimize.Location = new System.Drawing.Point(981, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(983, 3);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(22, 22);
             this.btnMinimize.TabIndex = 5;
@@ -251,7 +251,7 @@
             this.ntnMaximize.IconChar = FontAwesome.Sharp.IconChar.CompressAlt;
             this.ntnMaximize.IconColor = System.Drawing.Color.White;
             this.ntnMaximize.IconSize = 22;
-            this.ntnMaximize.Location = new System.Drawing.Point(1009, 3);
+            this.ntnMaximize.Location = new System.Drawing.Point(1011, 3);
             this.ntnMaximize.Name = "ntnMaximize";
             this.ntnMaximize.Size = new System.Drawing.Size(22, 22);
             this.ntnMaximize.TabIndex = 4;
@@ -266,7 +266,7 @@
             this.bntClose.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.bntClose.IconColor = System.Drawing.Color.White;
             this.bntClose.IconSize = 22;
-            this.bntClose.Location = new System.Drawing.Point(1037, 3);
+            this.bntClose.Location = new System.Drawing.Point(1039, 3);
             this.bntClose.Name = "bntClose";
             this.bntClose.Size = new System.Drawing.Size(22, 22);
             this.bntClose.TabIndex = 3;
@@ -305,7 +305,7 @@
             this.pnlShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlShadow.Location = new System.Drawing.Point(220, 65);
             this.pnlShadow.Name = "pnlShadow";
-            this.pnlShadow.Size = new System.Drawing.Size(1062, 10);
+            this.pnlShadow.Size = new System.Drawing.Size(1064, 10);
             this.pnlShadow.TabIndex = 2;
             // 
             // pnlContent
@@ -316,7 +316,7 @@
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(220, 75);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1062, 536);
+            this.pnlContent.Size = new System.Drawing.Size(1064, 536);
             this.pnlContent.TabIndex = 3;
             // 
             // lblInicio
@@ -325,7 +325,7 @@
             this.lblInicio.AutoSize = true;
             this.lblInicio.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInicio.ForeColor = System.Drawing.Color.White;
-            this.lblInicio.Location = new System.Drawing.Point(352, 84);
+            this.lblInicio.Location = new System.Drawing.Point(353, 84);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(400, 266);
             this.lblInicio.TabIndex = 1;
@@ -335,7 +335,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lLastNameUser);
             this.panel1.Controls.Add(this.lNameUser);
             this.panel1.Controls.Add(this.iconUser);
             this.panel1.Controls.Add(this.lFecha);
@@ -343,21 +343,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 476);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1062, 60);
+            this.panel1.Size = new System.Drawing.Size(1064, 60);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lLastNameUser
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lLastNameUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(62, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Pared Baez";
+            this.lLastNameUser.AutoSize = true;
+            this.lLastNameUser.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lLastNameUser.ForeColor = System.Drawing.Color.White;
+            this.lLastNameUser.Location = new System.Drawing.Point(62, 32);
+            this.lLastNameUser.Name = "lLastNameUser";
+            this.lLastNameUser.Size = new System.Drawing.Size(79, 19);
+            this.lLastNameUser.TabIndex = 4;
+            this.lLastNameUser.Text = "Pared Baez";
             // 
             // lNameUser
             // 
@@ -392,7 +392,7 @@
             this.lFecha.AutoSize = true;
             this.lFecha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lFecha.ForeColor = System.Drawing.Color.White;
-            this.lFecha.Location = new System.Drawing.Point(836, 36);
+            this.lFecha.Location = new System.Drawing.Point(838, 36);
             this.lFecha.Name = "lFecha";
             this.lFecha.Size = new System.Drawing.Size(183, 19);
             this.lFecha.TabIndex = 1;
@@ -404,7 +404,7 @@
             this.lHora.AutoSize = true;
             this.lHora.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHora.ForeColor = System.Drawing.Color.White;
-            this.lHora.Location = new System.Drawing.Point(864, 2);
+            this.lHora.Location = new System.Drawing.Point(866, 2);
             this.lHora.Name = "lHora";
             this.lHora.Size = new System.Drawing.Size(125, 34);
             this.lHora.TabIndex = 0;
@@ -429,7 +429,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 611);
+            this.ClientSize = new System.Drawing.Size(1284, 611);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlShadow);
             this.Controls.Add(this.pnlTitulo);
@@ -437,11 +437,12 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(850, 650);
+            this.MinimumSize = new System.Drawing.Size(950, 650);
             this.Name = "Inicio";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.Resize += new System.EventHandler(this.Inicio_Resize);
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogotipo.ResumeLayout(false);
@@ -486,7 +487,7 @@
         private System.Windows.Forms.Label lHora;
         private System.Windows.Forms.Label lFecha;
         private FontAwesome.Sharp.IconPictureBox iconUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lLastNameUser;
         private System.Windows.Forms.Label lNameUser;
         internal System.Windows.Forms.Label lblInicio;
     }

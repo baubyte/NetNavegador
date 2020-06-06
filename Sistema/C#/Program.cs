@@ -17,8 +17,8 @@ namespace sistema
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             /**Inciamos el Form Principal o de Incio*/
-            Inicio home = new Inicio();
-            home.Show();
+            Login login = new Login();
+            login.Show();
             Application.Run();
         }
     }

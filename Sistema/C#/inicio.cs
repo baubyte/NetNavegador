@@ -204,7 +204,9 @@ namespace sistema
                 lTitleFormActive.Text = "Salir";
                 if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    Application.Exit();
+                    Login login = new Login();
+                    login.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -287,6 +289,12 @@ namespace sistema
         {
             lFecha.Text = DateTime.Now.ToLongDateString();
             lHora.Text = DateTime.Now.ToString("HH:mm:ssss");
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            lNameUser.Text = Routines.nameUser;
+            lLastNameUser.Text = Routines.lastNameUser;
         }
     }
 }
