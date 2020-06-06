@@ -25,6 +25,7 @@ namespace sistema
             InitializeComponent();
             /**Creamos el Objeto*/
             routines = new Routines();
+            Routines.checkSave = true;
         }
         #region Metodos Necesarios para el Funcinamiento del ABM
         /**Para Buscar los Clientes*/
@@ -38,7 +39,9 @@ namespace sistema
                 gridProveedores.Visible = false;
                 lIdProveedor.Visible = false;
                 btnBorrar.Visible = false;
+                pnlBordeBorrar.Visible = false;
                 btnEditar.Visible = false;
+                pnlBordeEditar.Visible = false;
             }
             else
             {
@@ -47,7 +50,9 @@ namespace sistema
                 gridProveedores.Visible = true;
                 lIdProveedor.Visible = true;
                 btnBorrar.Visible = true;
+                pnlBordeBorrar.Visible = true;
                 btnEditar.Visible = true;
+                pnlBordeEditar.Visible = false;
             }
         }
         /**Filtro de la Fila Seleccionada*/
@@ -113,11 +118,19 @@ namespace sistema
         #region Botones
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
-            if (routines.SqlAccion("INSERT INTO Proveedores (ApellidoProveedor ,NombreProveedor ,DocumentoProveedor ,CuitProveedor,DomicilioProveedor ,PostalProveedor ,LocalidadProveedor ,ProvinciaProveedor ,TelefonoProveedor ,FechaNacimientoProveedor ,ComentariosProveedor ,EMailProveedor ,Estado) VALUES ('*****', '*****','','','','', '', '','', getdate(), '', '', 1)  "))
+            if (Routines.checkSave)
             {
-                buscar(" ApeYNom LIKE '****%' ");
-                MessageBox.Show("Se ha Creado un Nuevo Registro para el Proveedor que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (routines.SqlAccion("INSERT INTO Proveedores (ApellidoProveedor ,NombreProveedor ,DocumentoProveedor ,CuitProveedor,DomicilioProveedor ,PostalProveedor ,LocalidadProveedor ,ProvinciaProveedor ,TelefonoProveedor ,FechaNacimientoProveedor ,ComentariosProveedor ,EMailProveedor ,Estado) VALUES ('*****', '*****','','','','', '', '','', getdate(), '', '', 1)  "))
+                {
+                    /**Cambiamos el Estado de la Validacion*/
+                    Routines.checkSave = false;
+                    buscar(" ApeYNom LIKE '****%' ");
+                    MessageBox.Show("Se ha Creado un Nuevo Registro para el Proveedor que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Nuevo Proveedor Creado Antes Agregar un Nuevo Proveedor.", "Nuevo Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -164,6 +177,8 @@ namespace sistema
             {
                 MessageBox.Show("Cambios Realizados Correctamente.", "Editar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 buscar(" NProveedor=" + routines.Vnum(lIdProveedor.Text));
+                /**Cambiamos el Estado del checkSave*/
+                Routines.checkSave = true;
             }
             else
             {
@@ -183,6 +198,10 @@ namespace sistema
             }
             else
             {
+                if (!Routines.checkSave)
+                {
+                    Routines.checkSave = true;
+                }
                 buscar(" NProveedor=" + Conversion.Val(lIdProveedor.Text));
                 MessageBox.Show("El Proveedor fue ELIMINADO de la Base de Datos.", "Eliminar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -190,7 +209,14 @@ namespace sistema
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
+            if (Routines.checkSave)
+            {
+              buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Nuevo Proveedor Creado o Eliminarlo en su Defecto Antes de Buscar.", "Buscar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         #endregion Botones
 

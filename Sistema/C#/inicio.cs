@@ -36,6 +36,7 @@ namespace sistema
             this.DoubleBuffered = true;
             /**Para que Ocupe solo el Area de Trabajo al Maximizar*/
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Routines.checkSave = true;
         }
         /**Estructura para los Colores*/
         private struct RGBColors
@@ -158,9 +159,16 @@ namespace sistema
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            /**Abrimos el FORM*/
-            OpenFormChild(new Clientes());
+            if (Routines.checkSave)
+            {
+                ActivateButton(sender, RGBColors.color1);
+                /**Abrimos el FORM*/
+                OpenFormChild(new Clientes());
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         /**Eliminamos los Bordes Transparentes Cuando Esta Maximizado*/
         private void Inicio_Resize(object sender, EventArgs e)
@@ -175,27 +183,41 @@ namespace sistema
         /**Botones del Menu*/
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
-            /**Abrimos el FORM*/
-            OpenFormChild(new Proveedores());
+            if (Routines.checkSave)
+            {
+                ActivateButton(sender, RGBColors.color2);
+                /**Abrimos el FORM*/
+                OpenFormChild(new Proveedores());
+            }
+            else
+            {
+               MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color6);
-            /**Mostramos el Titulo*/
-            lTitleFormActive.Text = "Salir";
-            if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (Routines.checkSave)
             {
-                Application.Exit();
+                ActivateButton(sender, RGBColors.color6);
+                /**Mostramos el Titulo*/
+                lTitleFormActive.Text = "Salir";
+                if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    if (activeFormChild != null)
+                    {
+                        activeFormChild.Close();
+                    }
+                    Reset();
+                }
             }
             else
             {
-                if (activeFormChild != null)
-                {
-                    activeFormChild.Close();
-                }
-                Reset();
+                MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

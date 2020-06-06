@@ -16,6 +16,8 @@ namespace sistema
 {
     class Routines
     {
+        /**Para la Validaciones al Crear Un Nuevo Cliente o Proveedor*/
+        internal static bool checkSave { get; set; }
         /**Para la conexión a la dB*/
         public SqlConnection Conectar()
         {

@@ -25,6 +25,7 @@ namespace sistema
             InitializeComponent();
             /**Creamos el Objeto*/
             routines = new Routines();
+            Routines.checkSave = true;
         }
         #region Metodos Necesarios para el Funcinamiento del ABM
         /**Para Buscar los Clientes*/
@@ -38,7 +39,9 @@ namespace sistema
                 gridClientes.Visible = false;
                 lIdCliente.Visible = false;
                 btnBorrar.Visible = false;
+                pnlBordeBorrar.Visible = false;
                 btnEditar.Visible = false;
+                pnlBordeEditar.Visible = false;
             }
             else
             {
@@ -47,7 +50,9 @@ namespace sistema
                 gridClientes.Visible = true;
                 lIdCliente.Visible = true;
                 btnBorrar.Visible = true;
+                pnlBordeBorrar.Visible = true;
                 btnEditar.Visible = true;
+                pnlBordeEditar.Visible = false;
             }
         }
         /**Filtro de la Fila Seleccionada*/
@@ -113,9 +118,16 @@ namespace sistema
 
         #endregion Metodos Necesarios para el Funcinamiento del ABM
         #region Botones
-        private void btnCliente_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
+            if (Routines.checkSave)
+            {
+                buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Nuevo Cliente Creado o Eliminarlo en su Defecto Antes de Buscar.", "Buscar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void Clientes_Load(object sender, EventArgs e)
@@ -124,10 +136,19 @@ namespace sistema
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            if (routines.SqlAccion("INSERT INTO Clientes (ApellidoCliente ,NombreCliente ,DocumentoCliente ,CuitCliente ,UsuarioCliente ,ClaveCliente ,DomicilioCliente ,PostalCliente ,LocalidadCliente ,ProvinciaCliente ,TelefonoCliente ,FechaNacimientoCliente ,ComentariosCliente ,EMailCliente ,Estado) VALUES ('*****', '*****','','','', '', '', '', '', '','', getdate(), '', '', 1)  "))
+            if (Routines.checkSave)
             {
-                buscar(" ApeYNom LIKE '****%' ");
-                MessageBox.Show("Se ha Creado un Nuevo Registro para el Cliente que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (routines.SqlAccion("INSERT INTO Clientes (ApellidoCliente ,NombreCliente ,DocumentoCliente ,CuitCliente ,UsuarioCliente ,ClaveCliente ,DomicilioCliente ,PostalCliente ,LocalidadCliente ,ProvinciaCliente ,TelefonoCliente ,FechaNacimientoCliente ,ComentariosCliente ,EMailCliente ,Estado) VALUES ('*****', '*****','','','', '', '', '', '', '','', getdate(), '', '', 1)  "))
+                {
+                    /**Cambiamos el Estado de la Validacion*/
+                    Routines.checkSave = false;
+                    buscar(" ApeYNom LIKE '****%' ");
+                    MessageBox.Show("Se ha Creado un Nuevo Registro para el Cliente que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Nuevo Cliente Creado Antes Volver a Agregar un Nuevo Cliente.", "Nuevo Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -141,6 +162,10 @@ namespace sistema
             }
             else
             {
+                if (!Routines.checkSave)
+                {
+                    Routines.checkSave = true;
+                }
                 buscar(" NCliente=" + Conversion.Val(lIdCliente.Text));
                 MessageBox.Show("El Cliente fue ELIMINADO de la Base de Datos.", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

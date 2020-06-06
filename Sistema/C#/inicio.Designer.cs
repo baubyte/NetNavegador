@@ -55,6 +55,7 @@
             this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.lblInicio = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlLogotipo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLogoTipo)).BeginInit();
@@ -310,6 +311,7 @@
             // pnlContent
             // 
             this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.pnlContent.Controls.Add(this.lblInicio);
             this.pnlContent.Controls.Add(this.panel1);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(220, 75);
@@ -409,6 +411,20 @@
             this.tmFechaHora.Enabled = true;
             this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
             // 
+            // lblInicio
+            // 
+            this.lblInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.ForeColor = System.Drawing.Color.White;
+            this.lblInicio.Location = new System.Drawing.Point(352, 84);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(400, 266);
+            this.lblInicio.TabIndex = 1;
+            this.lblInicio.Text = "Bienvenido al\r\nSistema de Gestion\r\nde\r\nClientes y Proveedores\r\n\r\nElija Algunas de" +
+    " las Opciones\r\nDisponibles";
+            this.lblInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -436,6 +452,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ntnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bntClose)).EndInit();
             this.pnlContent.ResumeLayout(false);
+            this.pnlContent.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconUser)).EndInit();
@@ -470,6 +487,7 @@
         private FontAwesome.Sharp.IconPictureBox iconUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lNameUser;
+        internal System.Windows.Forms.Label lblInicio;
     }
 }
 
