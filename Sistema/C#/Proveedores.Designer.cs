@@ -73,11 +73,13 @@
             this.tNombre = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.tApellido = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // lIdProveedor
             // 
+            this.lIdProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lIdProveedor.AutoSize = true;
             this.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.lIdProveedor.ForeColor = System.Drawing.Color.White;
@@ -89,7 +91,7 @@
             // 
             // pnlBordeBuscar
             // 
-            this.pnlBordeBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBordeBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlBordeBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pnlBordeBuscar.Location = new System.Drawing.Point(893, 23);
             this.pnlBordeBuscar.Name = "pnlBordeBuscar";
@@ -98,7 +100,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
@@ -122,6 +124,7 @@
             // 
             // Label2
             // 
+            this.Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.White;
@@ -133,6 +136,7 @@
             // 
             // Label1
             // 
+            this.Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
@@ -144,8 +148,7 @@
             // 
             // tBuscar
             // 
-            this.tBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBuscar.Location = new System.Drawing.Point(559, 32);
             this.tBuscar.Name = "tBuscar";
@@ -154,15 +157,15 @@
             // 
             // gridProveedores
             // 
+            this.gridProveedores.AllowUserToAddRows = false;
             this.gridProveedores.AllowUserToDeleteRows = false;
             this.gridProveedores.AllowUserToOrderColumns = true;
-            this.gridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.gridProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridProveedores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.gridProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridProveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
@@ -170,7 +173,8 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProveedores.ColumnHeadersHeight = 30;
+            this.gridProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nproveedor,
             this.ApeYNom,
@@ -189,7 +193,7 @@
             this.gridProveedores.Name = "gridProveedores";
             this.gridProveedores.ReadOnly = true;
             this.gridProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
@@ -325,21 +329,19 @@
             // 
             // tEmail
             // 
-            this.tEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tEmail.Location = new System.Drawing.Point(135, 347);
             this.tEmail.MaxLength = 35;
             this.tEmail.Name = "tEmail";
-            this.tEmail.Size = new System.Drawing.Size(373, 23);
+            this.tEmail.Size = new System.Drawing.Size(359, 23);
             this.tEmail.TabIndex = 134;
             // 
             // Label15
             // 
-            this.Label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label15.AutoSize = true;
             this.Label15.ForeColor = System.Drawing.Color.White;
-            this.Label15.Location = new System.Drawing.Point(356, 238);
+            this.Label15.Location = new System.Drawing.Point(361, 238);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(26, 16);
             this.Label15.TabIndex = 133;
@@ -347,8 +349,7 @@
             // 
             // Label7
             // 
-            this.Label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label7.AutoSize = true;
             this.Label7.ForeColor = System.Drawing.Color.White;
             this.Label7.Location = new System.Drawing.Point(25, 166);
@@ -359,21 +360,19 @@
             // 
             // tCUIT
             // 
-            this.tCUIT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tCUIT.Location = new System.Drawing.Point(172, 163);
+            this.tCUIT.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tCUIT.Location = new System.Drawing.Point(135, 163);
             this.tCUIT.MaxLength = 30;
             this.tCUIT.Name = "tCUIT";
-            this.tCUIT.Size = new System.Drawing.Size(322, 23);
+            this.tCUIT.Size = new System.Drawing.Size(359, 23);
             this.tCUIT.TabIndex = 131;
             // 
             // CheckBox1
             // 
-            this.CheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CheckBox1.AutoSize = true;
             this.CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.CheckBox1.Location = new System.Drawing.Point(408, 127);
+            this.CheckBox1.Location = new System.Drawing.Point(428, 130);
             this.CheckBox1.Name = "CheckBox1";
             this.CheckBox1.Size = new System.Drawing.Size(66, 20);
             this.CheckBox1.TabIndex = 130;
@@ -382,8 +381,7 @@
             // 
             // Label3
             // 
-            this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label3.AutoSize = true;
             this.Label3.ForeColor = System.Drawing.Color.White;
             this.Label3.Location = new System.Drawing.Point(25, 277);
@@ -394,18 +392,16 @@
             // 
             // tLocalidad
             // 
-            this.tLocalidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tLocalidad.Location = new System.Drawing.Point(121, 235);
+            this.tLocalidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tLocalidad.Location = new System.Drawing.Point(135, 235);
             this.tLocalidad.MaxLength = 20;
             this.tLocalidad.Name = "tLocalidad";
-            this.tLocalidad.Size = new System.Drawing.Size(232, 23);
+            this.tLocalidad.Size = new System.Drawing.Size(218, 23);
             this.tLocalidad.TabIndex = 128;
             // 
             // Label16
             // 
-            this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label16.AutoSize = true;
             this.Label16.ForeColor = System.Drawing.Color.White;
             this.Label16.Location = new System.Drawing.Point(25, 410);
@@ -416,20 +412,18 @@
             // 
             // tComentario
             // 
-            this.tComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tComentario.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tComentario.Location = new System.Drawing.Point(135, 383);
             this.tComentario.MaxLength = 200;
             this.tComentario.Multiline = true;
             this.tComentario.Name = "tComentario";
             this.tComentario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tComentario.Size = new System.Drawing.Size(373, 89);
+            this.tComentario.Size = new System.Drawing.Size(359, 89);
             this.tComentario.TabIndex = 122;
             // 
             // Label12
             // 
-            this.Label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label12.AutoSize = true;
             this.Label12.ForeColor = System.Drawing.Color.White;
             this.Label12.Location = new System.Drawing.Point(25, 133);
@@ -440,18 +434,16 @@
             // 
             // DateTimePicker1
             // 
-            this.DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePicker1.Location = new System.Drawing.Point(208, 127);
+            this.DateTimePicker1.Location = new System.Drawing.Point(156, 127);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(168, 23);
+            this.DateTimePicker1.Size = new System.Drawing.Size(139, 23);
             this.DateTimePicker1.TabIndex = 119;
             // 
             // Label11
             // 
-            this.Label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label11.AutoSize = true;
             this.Label11.ForeColor = System.Drawing.Color.White;
             this.Label11.Location = new System.Drawing.Point(25, 354);
@@ -462,18 +454,16 @@
             // 
             // tTelefono
             // 
-            this.tTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tTelefono.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tTelefono.Location = new System.Drawing.Point(135, 310);
             this.tTelefono.MaxLength = 35;
             this.tTelefono.Name = "tTelefono";
-            this.tTelefono.Size = new System.Drawing.Size(373, 23);
+            this.tTelefono.Size = new System.Drawing.Size(359, 23);
             this.tTelefono.TabIndex = 118;
             // 
             // Label10
             // 
-            this.Label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label10.AutoSize = true;
             this.Label10.ForeColor = System.Drawing.Color.White;
             this.Label10.Location = new System.Drawing.Point(25, 313);
@@ -484,18 +474,16 @@
             // 
             // tProvincia
             // 
-            this.tProvincia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tProvincia.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tProvincia.Location = new System.Drawing.Point(135, 271);
             this.tProvincia.MaxLength = 30;
             this.tProvincia.Name = "tProvincia";
-            this.tProvincia.Size = new System.Drawing.Size(373, 23);
+            this.tProvincia.Size = new System.Drawing.Size(359, 23);
             this.tProvincia.TabIndex = 117;
             // 
             // Label9
             // 
-            this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label9.AutoSize = true;
             this.Label9.ForeColor = System.Drawing.Color.White;
             this.Label9.Location = new System.Drawing.Point(25, 238);
@@ -506,8 +494,7 @@
             // 
             // tCP
             // 
-            this.tCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tCP.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tCP.Location = new System.Drawing.Point(395, 235);
             this.tCP.MaxLength = 10;
             this.tCP.Name = "tCP";
@@ -516,8 +503,7 @@
             // 
             // Label8
             // 
-            this.Label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label8.AutoSize = true;
             this.Label8.ForeColor = System.Drawing.Color.White;
             this.Label8.Location = new System.Drawing.Point(25, 202);
@@ -528,8 +514,7 @@
             // 
             // tDireccion
             // 
-            this.tDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tDireccion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tDireccion.Location = new System.Drawing.Point(135, 199);
             this.tDireccion.MaxLength = 50;
             this.tDireccion.Name = "tDireccion";
@@ -538,8 +523,7 @@
             // 
             // Label6
             // 
-            this.Label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label6.AutoSize = true;
             this.Label6.ForeColor = System.Drawing.Color.White;
             this.Label6.Location = new System.Drawing.Point(25, 94);
@@ -550,18 +534,16 @@
             // 
             // tDNI
             // 
-            this.tDNI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tDNI.Location = new System.Drawing.Point(158, 91);
+            this.tDNI.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tDNI.Location = new System.Drawing.Point(135, 91);
             this.tDNI.MaxLength = 8;
             this.tDNI.Name = "tDNI";
-            this.tDNI.Size = new System.Drawing.Size(336, 23);
+            this.tDNI.Size = new System.Drawing.Size(359, 23);
             this.tDNI.TabIndex = 114;
             // 
             // Label5
             // 
-            this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label5.AutoSize = true;
             this.Label5.ForeColor = System.Drawing.Color.White;
             this.Label5.Location = new System.Drawing.Point(25, 58);
@@ -572,8 +554,7 @@
             // 
             // tNombre
             // 
-            this.tNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tNombre.Location = new System.Drawing.Point(135, 55);
             this.tNombre.MaxLength = 30;
             this.tNombre.Name = "tNombre";
@@ -582,8 +563,7 @@
             // 
             // Label4
             // 
-            this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label4.AutoSize = true;
             this.Label4.ForeColor = System.Drawing.Color.White;
             this.Label4.Location = new System.Drawing.Point(25, 22);
@@ -594,13 +574,23 @@
             // 
             // tApellido
             // 
-            this.tApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tApellido.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tApellido.Location = new System.Drawing.Point(135, 19);
             this.tApellido.MaxLength = 30;
             this.tApellido.Name = "tApellido";
             this.tApellido.Size = new System.Drawing.Size(359, 23);
             this.tApellido.TabIndex = 111;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(356, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 16);
+            this.label13.TabIndex = 135;
+            this.label13.Text = "Estado:";
             // 
             // Proveedores
             // 
@@ -608,6 +598,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1046, 497);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.tEmail);
             this.Controls.Add(this.Label15);
             this.Controls.Add(this.Label7);
@@ -701,5 +692,6 @@
         internal System.Windows.Forms.TextBox tNombre;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox tApellido;
+        internal System.Windows.Forms.Label label13;
     }
 }

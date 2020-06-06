@@ -113,7 +113,12 @@ namespace sistema
         #region Botones
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            /**Aca me quede
+            if (routines.SqlAccion("INSERT INTO Clientes (ApellidoCliente ,NombreCliente ,DocumentoCliente ,CuitCliente ,UsuarioCliente ,ClaveCliente ,DomicilioCliente ,PostalCliente ,LocalidadCliente ,ProvinciaCliente ,TelefonoCliente ,FechaNacimientoCliente ,ComentariosCliente ,EMailCliente ,Estado) VALUES ('*****', '*****','','','', '', '', '', '', '','', getdate(), '', '', 1)  "))
+            {
+                buscar(" ApeYNom LIKE '****%' ");
+                MessageBox.Show("Se ha Creado un Nuevo Registro para el Proveedor que Desea Ingresar, Seleccione la Línea Nueva, Cargue los Datos y Luego Confirme con el Botón 'Guardar'.", "Nuevo Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -128,7 +133,7 @@ namespace sistema
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
         }
         #endregion Botones
 

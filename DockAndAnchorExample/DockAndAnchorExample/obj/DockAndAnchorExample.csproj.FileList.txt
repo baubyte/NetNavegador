@@ -1,0 +1,10 @@
+bin\Debug\DockAndAnchorExample.exe
+bin\Debug\DockAndAnchorExample.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DockAndAnchorExample.AnchoringForm.resources
+obj\Debug\DockAndAnchorExample.DockingForm.resources
+obj\Debug\DockAndAnchorExample.Form1.resources
+obj\Debug\DockAndAnchorExample.Properties.Resources.resources
+obj\Debug\DockAndAnchorExample.csproj.GenerateResource.Cache
+obj\Debug\DockAndAnchorExample.exe
+obj\Debug\DockAndAnchorExample.pdb
