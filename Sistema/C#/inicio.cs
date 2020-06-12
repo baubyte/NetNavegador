@@ -43,7 +43,7 @@ namespace sistema
         {
             public static Color color1 = Color.FromArgb(138, 253, 114);
             public static Color color2 = Color.FromArgb(255, 192, 0);
-            public static Color color3 = Color.FromArgb(255, 255, 0);
+            public static Color color3 = Color.FromArgb(255, 213, 85);
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(46, 84, 38);
             public static Color color6 = Color.FromArgb(211, 16, 34);
@@ -194,7 +194,25 @@ namespace sistema
                MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void pLogoTipo_Click(object sender, EventArgs e)
+        {
+            /**Cerramos el FORM Hijo es decir el Activo*/
+            if (activeFormChild != null)
+            {
+                activeFormChild.Close();
+            }
+            Reset();
+        }
 
+        private void lGestion_Click(object sender, EventArgs e)
+        {
+            /**Cerramos el FORM Hijo es decir el Activo*/
+            if (activeFormChild != null)
+            {
+                activeFormChild.Close();
+            }
+            Reset();
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (Routines.checkSave)
@@ -223,24 +241,18 @@ namespace sistema
             }
         }
 
-        private void pLogoTipo_Click(object sender, EventArgs e)
+        private void btnProductos_Click(object sender, EventArgs e)
         {
-            /**Cerramos el FORM Hijo es decir el Activo*/
-            if (activeFormChild != null)
+            if (Routines.checkSave)
             {
-                activeFormChild.Close();
+                ActivateButton(sender, RGBColors.color3);
+                /**Abrimos el FORM*/
+                OpenFormChild(new Productos());
             }
-            Reset();
-        }
-
-        private void lGestion_Click(object sender, EventArgs e)
-        {
-            /**Cerramos el FORM Hijo es decir el Activo*/
-            if (activeFormChild != null)
+            else
             {
-                activeFormChild.Close();
+                MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            Reset();
         }
         #endregion
         #region Metodo para Expandir y Contraer Menu
