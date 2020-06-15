@@ -114,7 +114,7 @@ namespace sistema
             }
         }
 
-        #endregion Metodos Necesarios para el Funcinamiento del ABM
+        #endregion
         #region Botones
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -218,7 +218,7 @@ namespace sistema
                 MessageBox.Show("Debe Guardar los Cambios del Nuevo Proveedor Creado o Eliminarlo en su Defecto Antes de Buscar.", "Buscar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        #endregion Botones
+        #endregion
 
         #region Eventos
         private void gridProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)

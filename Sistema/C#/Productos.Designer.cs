@@ -41,7 +41,7 @@
             this.nproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lIdProveedor = new System.Windows.Forms.Label();
+            this.lIdProducto = new System.Windows.Forms.Label();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.tStock = new System.Windows.Forms.TextBox();
             this.btnAddProveedor = new FontAwesome.Sharp.IconButton();
             this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.lIdProveedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,17 +235,17 @@
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
             // 
-            // lIdProveedor
+            // lIdProducto
             // 
-            this.lIdProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lIdProveedor.AutoSize = true;
-            this.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.lIdProveedor.ForeColor = System.Drawing.Color.White;
-            this.lIdProveedor.Location = new System.Drawing.Point(534, 67);
-            this.lIdProveedor.Name = "lIdProveedor";
-            this.lIdProveedor.Size = new System.Drawing.Size(15, 16);
-            this.lIdProveedor.TabIndex = 114;
-            this.lIdProveedor.Text = "0";
+            this.lIdProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lIdProducto.AutoSize = true;
+            this.lIdProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.lIdProducto.ForeColor = System.Drawing.Color.White;
+            this.lIdProducto.Location = new System.Drawing.Point(534, 67);
+            this.lIdProducto.Name = "lIdProducto";
+            this.lIdProducto.Size = new System.Drawing.Size(15, 16);
+            this.lIdProducto.TabIndex = 114;
+            this.lIdProducto.Text = "0";
             // 
             // btnBuscar
             // 
@@ -501,12 +502,25 @@
             this.comboCategoria.Size = new System.Drawing.Size(359, 24);
             this.comboCategoria.TabIndex = 168;
             // 
+            // lIdProveedor
+            // 
+            this.lIdProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lIdProveedor.AutoSize = true;
+            this.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.lIdProveedor.ForeColor = System.Drawing.Color.White;
+            this.lIdProveedor.Location = new System.Drawing.Point(454, 271);
+            this.lIdProveedor.Name = "lIdProveedor";
+            this.lIdProveedor.Size = new System.Drawing.Size(15, 16);
+            this.lIdProveedor.TabIndex = 169;
+            this.lIdProveedor.Text = "0";
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1046, 497);
+            this.Controls.Add(this.lIdProveedor);
             this.Controls.Add(this.comboCategoria);
             this.Controls.Add(this.btnAddProveedor);
             this.Controls.Add(this.label6);
@@ -532,7 +546,7 @@
             this.Controls.Add(this.pnlBordeNuevo);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gridProductos);
-            this.Controls.Add(this.lIdProveedor);
+            this.Controls.Add(this.lIdProducto);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
@@ -556,7 +570,7 @@
         private System.Windows.Forms.Panel pnlBordeNuevo;
         private FontAwesome.Sharp.IconButton btnNuevo;
         internal System.Windows.Forms.DataGridView gridProductos;
-        internal System.Windows.Forms.Label lIdProveedor;
+        internal System.Windows.Forms.Label lIdProducto;
         private FontAwesome.Sharp.IconButton btnBuscar;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
@@ -582,5 +596,6 @@
         internal System.Windows.Forms.TextBox tStock;
         private FontAwesome.Sharp.IconButton btnAddProveedor;
         private System.Windows.Forms.ComboBox comboCategoria;
+        internal System.Windows.Forms.Label lIdProveedor;
     }
 }
