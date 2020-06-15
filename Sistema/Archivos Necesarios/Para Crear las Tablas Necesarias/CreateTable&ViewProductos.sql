@@ -17,7 +17,7 @@ CREATE TABLE [dbo].[Productos](
 	[PrecioProducto] [money] NULL default 0,
     [PrecioCostoProducto] [money] NULL default 0,
     [StockProducto] [int] NULL default 0,
-    [IDProveedor] [int] NOT NULL,
+    [NProveedor] [int] NOT NULL,
     [CategoriaProducto] [nvarchar](30) NOT NULL,
 	[Estado] [bit] NULL default 0,
  CONSTRAINT [Producto_PK] PRIMARY KEY NONCLUSTERED 
