@@ -52,7 +52,7 @@ namespace sistema
                 btnBorrar.Visible = true;
                 pnlBordeBorrar.Visible = true;
                 btnEditar.Visible = true;
-                pnlBordeEditar.Visible = false;
+                pnlBordeEditar.Visible = true;
             }
         }
         /**Filtro de la Fila Seleccionada*/
@@ -229,12 +229,10 @@ namespace sistema
         {
             FilaClick(e.RowIndex);
         }
-
-        #endregion Eventos
-
         private void Proveedores_Load(object sender, EventArgs e)
         {
             buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
         }
+        #endregion
     }
 }

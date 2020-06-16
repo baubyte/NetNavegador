@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBordeBorrar = new System.Windows.Forms.Panel();
             this.btnBorrar = new FontAwesome.Sharp.IconButton();
             this.pnlBordeEditar = new System.Windows.Forms.Panel();
@@ -38,10 +38,6 @@
             this.pnlBordeNuevo = new System.Windows.Forms.Panel();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.gridProductos = new System.Windows.Forms.DataGridView();
-            this.nproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lIdProducto = new System.Windows.Forms.Label();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
@@ -63,8 +59,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tStock = new System.Windows.Forms.TextBox();
             this.btnAddProveedor = new FontAwesome.Sharp.IconButton();
-            this.comboCategoria = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lIdProveedor = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tCodProducto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tMarcaProducto = new System.Windows.Forms.TextBox();
+            this.lIdProducto = new System.Windows.Forms.Label();
+            this.nproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +104,7 @@
             this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // pnlBordeEditar
             // 
@@ -131,6 +137,7 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // pnlBordeNuevo
             // 
@@ -163,6 +170,7 @@
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // gridProductos
             // 
@@ -174,78 +182,47 @@
             this.gridProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.gridProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridProductos.ColumnHeadersHeight = 30;
             this.gridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nproveedor,
-            this.nProducto,
+            this.nproducto,
+            this.CodigoProducto,
+            this.producto,
             this.precio});
             this.gridProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridProductos.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridProductos.EnableHeadersVisualStyles = false;
             this.gridProductos.Location = new System.Drawing.Point(526, 86);
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(86)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridProductos.Size = new System.Drawing.Size(508, 239);
             this.gridProductos.TabIndex = 115;
-            // 
-            // nproveedor
-            // 
-            this.nproveedor.DataPropertyName = "NProducto";
-            this.nproveedor.HeaderText = "nproveedor";
-            this.nproveedor.Name = "nproveedor";
-            this.nproveedor.ReadOnly = true;
-            this.nproveedor.Visible = false;
-            // 
-            // nProducto
-            // 
-            this.nProducto.DataPropertyName = "Producto";
-            this.nProducto.HeaderText = "Producto";
-            this.nProducto.Name = "nProducto";
-            this.nProducto.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "Precio";
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // lIdProducto
-            // 
-            this.lIdProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lIdProducto.AutoSize = true;
-            this.lIdProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.lIdProducto.ForeColor = System.Drawing.Color.White;
-            this.lIdProducto.Location = new System.Drawing.Point(534, 67);
-            this.lIdProducto.Name = "lIdProducto";
-            this.lIdProducto.Size = new System.Drawing.Size(15, 16);
-            this.lIdProducto.TabIndex = 114;
-            this.lIdProducto.Text = "0";
+            this.gridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductos_CellContentClick);
+            this.gridProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductos_CellEnter);
             // 
             // btnBuscar
             // 
@@ -269,6 +246,7 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Label2
             // 
@@ -317,7 +295,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(289, 234);
+            this.label13.Location = new System.Drawing.Point(289, 289);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 16);
             this.label13.TabIndex = 161;
@@ -328,18 +306,18 @@
             this.Label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label15.AutoSize = true;
             this.Label15.ForeColor = System.Drawing.Color.White;
-            this.Label15.Location = new System.Drawing.Point(27, 200);
+            this.Label15.Location = new System.Drawing.Point(27, 255);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(99, 16);
+            this.Label15.Size = new System.Drawing.Size(97, 16);
             this.Label15.TabIndex = 159;
-            this.Label15.Text = "Precio de Vwnta:";
+            this.Label15.Text = "Precio de Venta:";
             // 
             // CheckBox1
             // 
             this.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CheckBox1.AutoSize = true;
             this.CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.CheckBox1.Location = new System.Drawing.Point(397, 233);
+            this.CheckBox1.Location = new System.Drawing.Point(397, 288);
             this.CheckBox1.Name = "CheckBox1";
             this.CheckBox1.Size = new System.Drawing.Size(72, 20);
             this.CheckBox1.TabIndex = 156;
@@ -351,7 +329,7 @@
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label3.AutoSize = true;
             this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(27, 275);
+            this.Label3.Location = new System.Drawing.Point(27, 330);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(64, 16);
             this.Label3.TabIndex = 155;
@@ -362,7 +340,7 @@
             this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label16.AutoSize = true;
             this.Label16.ForeColor = System.Drawing.Color.White;
-            this.Label16.Location = new System.Drawing.Point(27, 127);
+            this.Label16.Location = new System.Drawing.Point(27, 182);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(73, 48);
             this.Label16.TabIndex = 153;
@@ -372,7 +350,7 @@
             // tDescripcionProducto
             // 
             this.tDescripcionProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tDescripcionProducto.Location = new System.Drawing.Point(137, 119);
+            this.tDescripcionProducto.Location = new System.Drawing.Point(137, 174);
             this.tDescripcionProducto.MaxLength = 200;
             this.tDescripcionProducto.Multiline = true;
             this.tDescripcionProducto.Name = "tDescripcionProducto";
@@ -385,7 +363,7 @@
             this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label10.AutoSize = true;
             this.Label10.ForeColor = System.Drawing.Color.White;
-            this.Label10.Location = new System.Drawing.Point(27, 311);
+            this.Label10.Location = new System.Drawing.Point(27, 366);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(114, 16);
             this.Label10.TabIndex = 150;
@@ -394,7 +372,7 @@
             // tProveedor
             // 
             this.tProveedor.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tProveedor.Location = new System.Drawing.Point(137, 269);
+            this.tProveedor.Location = new System.Drawing.Point(137, 324);
             this.tProveedor.MaxLength = 30;
             this.tProveedor.Name = "tProveedor";
             this.tProveedor.ReadOnly = true;
@@ -404,7 +382,7 @@
             // tPrecioVenta
             // 
             this.tPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tPrecioVenta.Location = new System.Drawing.Point(137, 197);
+            this.tPrecioVenta.Location = new System.Drawing.Point(137, 252);
             this.tPrecioVenta.MaxLength = 10;
             this.tPrecioVenta.Name = "tPrecioVenta";
             this.tPrecioVenta.Size = new System.Drawing.Size(99, 23);
@@ -435,7 +413,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(287, 203);
+            this.label5.Location = new System.Drawing.Point(287, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 16);
             this.label5.TabIndex = 163;
@@ -444,7 +422,7 @@
             // tPrecioCosto
             // 
             this.tPrecioCosto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tPrecioCosto.Location = new System.Drawing.Point(397, 200);
+            this.tPrecioCosto.Location = new System.Drawing.Point(397, 255);
             this.tPrecioCosto.MaxLength = 10;
             this.tPrecioCosto.Name = "tPrecioCosto";
             this.tPrecioCosto.Size = new System.Drawing.Size(99, 23);
@@ -455,7 +433,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 234);
+            this.label6.Location = new System.Drawing.Point(27, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 16);
             this.label6.TabIndex = 165;
@@ -464,7 +442,7 @@
             // tStock
             // 
             this.tStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tStock.Location = new System.Drawing.Point(137, 231);
+            this.tStock.Location = new System.Drawing.Point(137, 286);
             this.tStock.MaxLength = 10;
             this.tStock.Name = "tStock";
             this.tStock.Size = new System.Drawing.Size(99, 23);
@@ -479,28 +457,30 @@
             this.btnAddProveedor.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddProveedor.IconColor = System.Drawing.Color.White;
             this.btnAddProveedor.IconSize = 16;
-            this.btnAddProveedor.Location = new System.Drawing.Point(397, 263);
+            this.btnAddProveedor.Location = new System.Drawing.Point(397, 318);
             this.btnAddProveedor.Name = "btnAddProveedor";
             this.btnAddProveedor.Rotation = 0D;
             this.btnAddProveedor.Size = new System.Drawing.Size(35, 32);
             this.btnAddProveedor.TabIndex = 166;
             this.btnAddProveedor.UseVisualStyleBackColor = true;
             // 
-            // comboCategoria
+            // cmbCategoria
             // 
-            this.comboCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboCategoria.FormattingEnabled = true;
-            this.comboCategoria.Items.AddRange(new object[] {
+            this.cmbCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "Seleccione Categoria",
             "Alimentos",
             "Panaderia",
             "Art. Limpieza",
             "Bebidas",
             "Fiambres",
             "Art. Varios"});
-            this.comboCategoria.Location = new System.Drawing.Point(138, 308);
-            this.comboCategoria.Name = "comboCategoria";
-            this.comboCategoria.Size = new System.Drawing.Size(359, 24);
-            this.comboCategoria.TabIndex = 168;
+            this.cmbCategoria.Location = new System.Drawing.Point(138, 363);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(359, 24);
+            this.cmbCategoria.TabIndex = 168;
             // 
             // lIdProveedor
             // 
@@ -508,11 +488,92 @@
             this.lIdProveedor.AutoSize = true;
             this.lIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.lIdProveedor.ForeColor = System.Drawing.Color.White;
-            this.lIdProveedor.Location = new System.Drawing.Point(454, 271);
+            this.lIdProveedor.Location = new System.Drawing.Point(454, 326);
             this.lIdProveedor.Name = "lIdProveedor";
             this.lIdProveedor.Size = new System.Drawing.Size(15, 16);
             this.lIdProveedor.TabIndex = 169;
             this.lIdProveedor.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(27, 116);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 16);
+            this.label7.TabIndex = 170;
+            this.label7.Text = "Código Producto:";
+            // 
+            // tCodProducto
+            // 
+            this.tCodProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tCodProducto.Location = new System.Drawing.Point(137, 113);
+            this.tCodProducto.MaxLength = 30;
+            this.tCodProducto.Name = "tCodProducto";
+            this.tCodProducto.Size = new System.Drawing.Size(359, 23);
+            this.tCodProducto.TabIndex = 171;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(27, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 16);
+            this.label8.TabIndex = 172;
+            this.label8.Text = "Marca Producto:";
+            // 
+            // tMarcaProducto
+            // 
+            this.tMarcaProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tMarcaProducto.Location = new System.Drawing.Point(137, 142);
+            this.tMarcaProducto.MaxLength = 30;
+            this.tMarcaProducto.Name = "tMarcaProducto";
+            this.tMarcaProducto.Size = new System.Drawing.Size(359, 23);
+            this.tMarcaProducto.TabIndex = 173;
+            // 
+            // lIdProducto
+            // 
+            this.lIdProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lIdProducto.AutoSize = true;
+            this.lIdProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.lIdProducto.ForeColor = System.Drawing.Color.White;
+            this.lIdProducto.Location = new System.Drawing.Point(530, 67);
+            this.lIdProducto.Name = "lIdProducto";
+            this.lIdProducto.Size = new System.Drawing.Size(15, 16);
+            this.lIdProducto.TabIndex = 174;
+            this.lIdProducto.Text = "0";
+            // 
+            // nproducto
+            // 
+            this.nproducto.DataPropertyName = "NProducto";
+            this.nproducto.HeaderText = "nproducto";
+            this.nproducto.Name = "nproducto";
+            this.nproducto.ReadOnly = true;
+            this.nproducto.Visible = false;
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.DataPropertyName = "CodigoProducto";
+            this.CodigoProducto.HeaderText = "Cód, Producto";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            // 
+            // producto
+            // 
+            this.producto.DataPropertyName = "Producto";
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "PrecioVenta";
+            this.precio.HeaderText = "Precio Venta";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
             // 
             // Productos
             // 
@@ -520,8 +581,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1046, 497);
+            this.Controls.Add(this.lIdProducto);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tMarcaProducto);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tCodProducto);
             this.Controls.Add(this.lIdProveedor);
-            this.Controls.Add(this.comboCategoria);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.btnAddProveedor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tStock);
@@ -546,7 +612,6 @@
             this.Controls.Add(this.pnlBordeNuevo);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gridProductos);
-            this.Controls.Add(this.lIdProducto);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
@@ -555,6 +620,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Productos";
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -570,7 +636,6 @@
         private System.Windows.Forms.Panel pnlBordeNuevo;
         private FontAwesome.Sharp.IconButton btnNuevo;
         internal System.Windows.Forms.DataGridView gridProductos;
-        internal System.Windows.Forms.Label lIdProducto;
         private FontAwesome.Sharp.IconButton btnBuscar;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
@@ -587,15 +652,21 @@
         internal System.Windows.Forms.TextBox tPrecioVenta;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox tNombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nproveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.TextBox tPrecioCosto;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.TextBox tStock;
         private FontAwesome.Sharp.IconButton btnAddProveedor;
-        private System.Windows.Forms.ComboBox comboCategoria;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         internal System.Windows.Forms.Label lIdProveedor;
+        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.TextBox tCodProducto;
+        internal System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.TextBox tMarcaProducto;
+        internal System.Windows.Forms.Label lIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
     }
 }

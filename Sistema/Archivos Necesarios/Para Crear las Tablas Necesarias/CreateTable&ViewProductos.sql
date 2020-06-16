@@ -13,6 +13,8 @@ GO
 CREATE TABLE [dbo].[Productos](
 	[NProducto] [int] IDENTITY(1,1) NOT NULL,
 	[NombreProducto] [nvarchar](30) NULL,
+    [CodigoProducto] [nvarchar](30) NOT NULL,
+    [MarcaProducto] [nvarchar](30) NOT NULL,
     [DescripcionProducto] [nvarchar](200) NULL default '',
 	[PrecioProducto] [money] NULL default 0,
     [PrecioCostoProducto] [money] NULL default 0,
@@ -30,7 +32,7 @@ GO
     
     CREATE VIEW [dbo].[ProductosBusqueda]
     AS
-    SELECT     TOP (100) PERCENT NProducto, UPPER(LTRIM(NombreProducto)) AS Producto , PrecioProducto AS Precio
+    SELECT     TOP (100) PERCENT NProducto,CodigoProducto AS CodigoProducto, UPPER(LTRIM(NombreProducto) +' '+ LTRIM(MarcaProducto)) AS Producto , PrecioProducto AS PrecioVenta
     FROM         dbo.Productos
     order by UPPER(LTRIM(NombreProducto))
     GO

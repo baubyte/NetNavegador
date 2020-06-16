@@ -32,7 +32,7 @@ namespace sistema
             /**Desactivamos los Controles y los titulos de la Vnetana del FORM*/
             this.Text = string.Empty;
             this.ControlBox = false;
-            /**dOBLE Buffer para Evitar el Parpadeo*/
+            /**DOBLE Buffer para Evitar el Parpadeo*/
             this.DoubleBuffered = true;
             /**Para que Ocupe solo el Area de Trabajo al Maximizar*/
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -139,9 +139,16 @@ namespace sistema
         /**Botones de Minimizar Restaurar y Maximizar*/
         private void bntClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (Routines.checkSave)
             {
-                Application.Exit();
+                if (MessageBox.Show("¿Está Seguro de Cerrar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Guardar los Cambios del Registro Creado Antes de Continuar o en su Defecto Eliminelo .", "Cambiar de ABM", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void ntnMaximize_Click(object sender, EventArgs e)
@@ -259,7 +266,7 @@ namespace sistema
         /**Metodo para Expandir o Contraer Menu Vertical*/
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            /**Para Generar el Efecto*/
+            /**Para Generar el Efecto
             if (pnlMenu.Width == 220)
             {
                 this.tmContraerMenu.Start();
@@ -267,16 +274,17 @@ namespace sistema
             else if (pnlMenu.Width == 96)
             {
                 this.tmExpandirMenu.Start();
-            }
+            }*/
 
             /**Para Hacerlo si el Efecto*/
-            /*if (pnlMenu.Width == 55)
+            if (pnlMenu.Width == 96)
             {
                 pnlMenu.Width = 220;
             }
             else
-
-                pnlMenu.Width = 55;*/
+            {
+                pnlMenu.Width = 96;
+            }
 
         }
 

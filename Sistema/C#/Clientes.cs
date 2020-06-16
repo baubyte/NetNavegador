@@ -52,7 +52,7 @@ namespace sistema
                 btnBorrar.Visible = true;
                 pnlBordeBorrar.Visible = true;
                 btnEditar.Visible = true;
-                pnlBordeEditar.Visible = false;
+                pnlBordeEditar.Visible = true;
             }
         }
         /**Filtro de la Fila Seleccionada*/
@@ -116,7 +116,7 @@ namespace sistema
             }
         }
 
-        #endregion Metodos Necesarios para el Funcinamiento del ABM
+        #endregion
         #region Botones
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -233,7 +233,7 @@ namespace sistema
                 MessageBox.Show("Se Produjo un Error al Querer Guardar los Datos del Cliente, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        #endregion Botones
+        #endregion
 
         #region Eventos
         private void gridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -245,7 +245,7 @@ namespace sistema
         {
             FilaClick(e.RowIndex);
         }
-        #endregion Eventos
+        #endregion
 
     }
 }
