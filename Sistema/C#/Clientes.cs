@@ -129,11 +129,6 @@ namespace sistema
                 MessageBox.Show("Debe Guardar los Cambios del Nuevo Cliente Creado o Eliminarlo en su Defecto Antes de Buscar.", "Buscar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void Clientes_Load(object sender, EventArgs e)
-        {
-            buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
-        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             if (Routines.checkSave)
@@ -236,16 +231,14 @@ namespace sistema
         #endregion
 
         #region Eventos
-        private void gridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridClientes_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             FilaClick(e.RowIndex);
         }
-
-        private void gridClientes_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void Clientes_Load(object sender, EventArgs e)
         {
-            FilaClick(e.RowIndex);
+            buscar(" ApeYNom LIKE '" + tBuscar.Text + "%' ");
         }
         #endregion
-
     }
 }

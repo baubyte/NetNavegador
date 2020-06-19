@@ -27,13 +27,8 @@ namespace sistema
             routines = new Routines();
             Routines.checkSave = true;
         }
+
         #region Metodos Necesarios para el Funcinamiento del ABM
-        /**Recibirá el Proveedor desde el formulario BuscarProveedores*/
-        public void SetCategoria(string idProveedor, string nombreProveedor)
-        {
-            lIdProveedor.Text = idProveedor;
-            tProveedor.Text = nombreProveedor;
-        }
         /**Para Buscar los Productos*/
         public void buscar(string condicion)
         {
@@ -65,7 +60,7 @@ namespace sistema
         public void FilaClick(int fila)
         {
             string tfila;
-            if (Information.IsNothing(gridProductos.Rows[fila].Cells[0].Value))
+            if (Information.IsNothing(gridProductos.Rows[fila].Cells["NProducto"].Value))
             {
                 lIdProducto.Text = "0";
                 btnBorrar.Visible = false;
@@ -118,6 +113,13 @@ namespace sistema
                 lIdProveedor.Text = dataSet.Tables["productos"].Rows[0]["NProveedor"].ToString();
             }
         }
+        /**Para Abrir el FORM de Buscar Proveedor*/
+        private void openBuscarProveedor()
+        {
+            Form buscarProveedor = new BuscarProveedor();
+            AddOwnedForm(buscarProveedor);
+            buscarProveedor.ShowDialog();
+        }
         #endregion
         #region Botones
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -154,7 +156,7 @@ namespace sistema
         {
             if (Routines.checkSave)
             {
-                if (routines.SqlAccion("INSERT INTO Productos ([NombreProducto],[CodigoProducto],[MarcaProducto],[DescripcionProducto],[PrecioProducto],[PrecioCostoProducto],[StockProducto],[NProveedor],[CategoriaProducto],[Estado]) VALUES ('*****', '*****','****','','','', '', '','', 1)  "))
+                if (routines.SqlAccion("INSERT INTO Productos (NombreProducto,CodigoProducto,MarcaProducto,DescripcionProducto,PrecioProducto,PrecioCostoProducto,StockProducto,NProveedor,CategoriaProducto,Estado) VALUES ('*****', '*****','****','','','', '', '','', 1)  "))
                 {
                     /**Cambiamos el Estado de la Validacion*/
                     Routines.checkSave = false;
@@ -186,20 +188,24 @@ namespace sistema
             {
                 errores += "El Código del Producto Ingresado ya Existe." + enter;
             }
-            falta validar precios
-            tPrecioVenta.Text = tPrecioVenta.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", "");
-            if (tPrecioVenta.Text.IndexOf("11111") > -1 | tPrecioVenta.Text.IndexOf("12345") > -1 | tPrecioVenta.Text.IndexOf("000000") > -1)
+            tPrecioVenta.Text = tPrecioVenta.Text.Trim().Replace("-", "");
+            if (tPrecioVenta.Text.IndexOf("11111") > -1 | tPrecioVenta.Text.IndexOf("12345") > -1 | tPrecioVenta.Text.IndexOf("000000") > -1 | routines.Vnum(tPrecioVenta.Text) <= 0)
             {
                 errores += "Debe completar CORRECTAMENTE el Precio de Venta." + enter;
             }
-            tPrecioCosto.Text = tPrecioCosto.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", "");
-            if (tPrecioCosto.Text.IndexOf("11111") > -1 | tPrecioCosto.Text.IndexOf("12345") > -1 | tPrecioCosto.Text.IndexOf("000000") > -1)
+            tPrecioCosto.Text = tPrecioCosto.Text.Trim().Replace("-", "");
+            if (tPrecioCosto.Text.IndexOf("11111") > -1 | tPrecioCosto.Text.IndexOf("12345") > -1 | tPrecioCosto.Text.IndexOf("000000") > -1 | routines.Vnum(tPrecioCosto.Text) <= 0)
             {
                 errores += "Debe completar CORRECTAMENTE el Precio de Costo." + enter;
             }
+            tStock.Text = tStock.Text.Trim().Replace("-", "");
+            if (tStock.Text.IndexOf("11111") > -1 | tStock.Text.IndexOf("12345") > -1 | tStock.Text.IndexOf("000000") > -1 | routines.Vnum(tStock.Text) <= 0)
+            {
+                errores += "Debe completar CORRECTAMENTE el Stock del Producto." + enter;
+            }
             if (tProveedor.Text.Trim().Length < 3)
             {
-                errores += "Debe Completar el Proveedor." + enter;
+                errores += "Debe Completar el Nombre del Proveedor." + enter;
             }
             if (cmbCategoria.SelectedIndex == 0)
             {
@@ -211,17 +217,21 @@ namespace sistema
                 return;
             }
             /**Ejecutamos el Update*/
-            /*if (routines.SqlAccion("UPDATE Proveedores SET Estado =" + (CheckBox1.Checked ? 1 : 0) + ", ApellidoProveedor='" + tApellido.Text.Trim().ToUpper().Replace("'", "´") + "' , NombreProveedor='" + tNombre.Text.Trim().ToUpper().Replace("'", "´") + "', DocumentoProveedor=" + Conversion.Val(tDNI.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", CuitProveedor =" + Conversion.Val(tCUIT.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", DomicilioProveedor='" + tDireccion.Text.Trim().ToUpper().Replace("'", "´") + "', ProvinciaProveedor='" + tProvincia.Text.Trim().ToUpper().Replace("'", "´") + "', LocalidadProveedor='" + tLocalidad.Text.Trim().ToUpper().Replace("'", "´") + "', PostalProveedor='" + tCP.Text.Trim().ToUpper().Replace("'", "´") + "', EMailProveedor='" + tEmail.Text.Trim().ToUpper().Replace("'", "´") + "', FechaNacimientoProveedor=" + routines.FechaSql(DateTimePicker1.Value) + ", TelefonoProveedor=" + Conversion.Val(tTelefono.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", ComentariosProveedor='" + tComentario.Text.Trim().ToUpper().Replace("'", "´") + "' WHERE NProveedor=" + routines.Vnum(lIdProveedor.Text)) == true)
-            {*/
-                /*MessageBox.Show("Cambios Realizados Correctamente.", "Editar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                buscar(" NProveedor=" + routines.Vnum(lIdProveedor.Text));
+            if (routines.SqlAccion("UPDATE Productos SET Estado =" + (CheckBox1.Checked ? 1 : 0) + ", NombreProducto='" + tNombreProducto.Text.Trim().ToUpper().Replace("'", "´") + "' , MarcaProducto='" + tMarcaProducto.Text.Trim().ToUpper().Replace("'", "´") + "', CodigoProducto=" + Conversion.Val(tCodProducto.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + ", PrecioProducto =" + routines.NumSql(tPrecioVenta.Text.Trim().Replace(" ", "")) + ", DescripcionProducto='" + tDescripcionProducto.Text.Trim().ToUpper().Replace("'", "´") + "', CategoriaProducto='" + cmbCategoria.SelectedItem + "', PrecioCostoProducto='" + routines.NumSql(tPrecioCosto.Text.Trim().Replace(" ", "")) + "', StockProducto='" + routines.NumSql(tStock.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "', NProveedor='" + Conversion.Val(lIdProveedor.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "' WHERE NProducto=" + routines.Vnum(lIdProducto.Text)) == true)
+            {
+                MessageBox.Show("Cambios Realizados Correctamente.", "Editar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buscar(" NProducto=" + routines.Vnum(lIdProducto.Text));
                 /**Cambiamos el Estado del checkSave*/
-                /*Routines.checkSave = true;
+                Routines.checkSave = true;
             }
             else
             {
-                MessageBox.Show("Se Produjo un Error al Querer Guardar los Datos del Proveedor, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", "Editar Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
+                MessageBox.Show("Se Produjo un Error al Querer Guardar los Datos del Producto, Reintente, y si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", "Editar Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnAddProveedor_Click(object sender, EventArgs e)
+        {
+            openBuscarProveedor();
         }
         #endregion
         #region Eventos
@@ -229,13 +239,13 @@ namespace sistema
         {
             buscar(" Producto LIKE '" + tBuscar.Text + "%' ");
         }
-        private void gridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             FilaClick(e.RowIndex);
         }
-        private void gridProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void tProveedor_Click(object sender, EventArgs e)
         {
-            FilaClick(e.RowIndex);
+            openBuscarProveedor();
         }
         #endregion
     }

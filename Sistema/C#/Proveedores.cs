@@ -28,7 +28,7 @@ namespace sistema
             Routines.checkSave = true;
         }
         #region Metodos Necesarios para el Funcinamiento del ABM
-        /**Para Buscar los Clientes*/
+        /**Para Buscar los Proveedores*/
         public void buscar(string condicion)
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT TOP (100) PERCENT NProveedor, ApeYNom, CUIT FROM ProveedoresBusqueda WHERE " + condicion + " ORDER BY ApeYNom", routines.Conectar());
@@ -221,11 +221,7 @@ namespace sistema
         #endregion
 
         #region Eventos
-        private void gridProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FilaClick(e.RowIndex);
-        }
-        private void gridProveedores_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void gridProveedores_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             FilaClick(e.RowIndex);
         }

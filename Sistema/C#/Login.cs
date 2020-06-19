@@ -32,6 +32,7 @@ namespace sistema
             this.DoubleBuffered = true;
             /**Creamos el Objeto*/
             routines = new Routines();
+            /***/
         }
         #region Metodos Para Iniciar Sesion
         /**Para Realizar el Login*/
@@ -70,7 +71,7 @@ namespace sistema
             }
         }
 
-        #endregion Metodos Para Iniciar Sesion
+        #endregion
         #region Botones y Metodos para el Movimiento del Formulario
         private void bntClose_Click(object sender, EventArgs e)
         {
@@ -120,6 +121,6 @@ namespace sistema
                 Application.Exit();
             }
         }
-        #endregion Botones y Metodos para el Movimiento del Formulario
+        #endregion
     }
 }

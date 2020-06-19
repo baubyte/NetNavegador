@@ -83,7 +83,6 @@
             // 
             // gridClientes
             // 
-            this.gridClientes.AllowUserToAddRows = false;
             this.gridClientes.AllowUserToDeleteRows = false;
             this.gridClientes.AllowUserToOrderColumns = true;
             this.gridClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -127,10 +126,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridClientes.Size = new System.Drawing.Size(508, 239);
             this.gridClientes.TabIndex = 15;
-            this.gridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellContentClick);
-            this.gridClientes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_CellEnter);
+            this.gridClientes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridClientes_RowEnter);
             // 
             // ncliente
             // 

@@ -201,10 +201,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridProveedores.Size = new System.Drawing.Size(508, 239);
             this.gridProveedores.TabIndex = 103;
-            this.gridProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProveedores_CellContentClick);
-            this.gridProveedores.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProveedores_CellEnter);
+            this.gridProveedores.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProveedores_RowEnter);
             // 
             // nproveedor
             // 
