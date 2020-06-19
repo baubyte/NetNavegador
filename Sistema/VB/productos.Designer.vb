@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class clientes
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class productos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,8 @@ Partial Class clientes
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(clientes))
-        Me.pnlTitulo = New System.Windows.Forms.Panel()
-        Me.pRestaurar = New System.Windows.Forms.PictureBox()
-        Me.pMini = New System.Windows.Forms.PictureBox()
-        Me.pMaxi = New System.Windows.Forms.PictureBox()
-        Me.pCerrar = New System.Windows.Forms.PictureBox()
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnBorrar = New System.Windows.Forms.Button()
@@ -37,6 +31,11 @@ Partial Class clientes
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.lblSistema = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pCerrar = New System.Windows.Forms.PictureBox()
+        Me.pMaxi = New System.Windows.Forms.PictureBox()
+        Me.pMini = New System.Windows.Forms.PictureBox()
+        Me.pRestaurar = New System.Windows.Forms.PictureBox()
+        Me.pnlTitulo = New System.Windows.Forms.Panel()
         Me.pnlContenido = New System.Windows.Forms.Panel()
         Me.lIdCliente = New System.Windows.Forms.Label()
         Me.pCampos = New System.Windows.Forms.Panel()
@@ -82,79 +81,20 @@ Partial Class clientes
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.pnlTitulo.SuspendLayout()
-        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlMenu.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlTitulo.SuspendLayout()
         Me.pnlContenido.SuspendLayout()
         Me.pCampos.SuspendLayout()
         CType(Me.gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.menuClientes.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'pnlTitulo
-        '
-        Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.pnlTitulo.Controls.Add(Me.pRestaurar)
-        Me.pnlTitulo.Controls.Add(Me.pMini)
-        Me.pnlTitulo.Controls.Add(Me.pMaxi)
-        Me.pnlTitulo.Controls.Add(Me.pCerrar)
-        Me.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTitulo.Name = "pnlTitulo"
-        Me.pnlTitulo.Size = New System.Drawing.Size(1300, 35)
-        Me.pnlTitulo.TabIndex = 1
-        '
-        'pRestaurar
-        '
-        Me.pRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pRestaurar.Image = Global.sistema.My.Resources.Resources.restore
-        Me.pRestaurar.Location = New System.Drawing.Point(1218, 3)
-        Me.pRestaurar.Name = "pRestaurar"
-        Me.pRestaurar.Size = New System.Drawing.Size(32, 32)
-        Me.pRestaurar.TabIndex = 3
-        Me.pRestaurar.TabStop = False
-        Me.pRestaurar.Visible = False
-        '
-        'pMini
-        '
-        Me.pMini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pMini.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pMini.Image = Global.sistema.My.Resources.Resources.minimize
-        Me.pMini.Location = New System.Drawing.Point(1180, 3)
-        Me.pMini.Name = "pMini"
-        Me.pMini.Size = New System.Drawing.Size(32, 32)
-        Me.pMini.TabIndex = 2
-        Me.pMini.TabStop = False
-        '
-        'pMaxi
-        '
-        Me.pMaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pMaxi.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pMaxi.Image = Global.sistema.My.Resources.Resources.maximize
-        Me.pMaxi.Location = New System.Drawing.Point(1218, 3)
-        Me.pMaxi.Name = "pMaxi"
-        Me.pMaxi.Size = New System.Drawing.Size(32, 32)
-        Me.pMaxi.TabIndex = 1
-        Me.pMaxi.TabStop = False
-        '
-        'pCerrar
-        '
-        Me.pCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pCerrar.Image = Global.sistema.My.Resources.Resources.cancel1
-        Me.pCerrar.Location = New System.Drawing.Point(1256, 3)
-        Me.pCerrar.Name = "pCerrar"
-        Me.pCerrar.Size = New System.Drawing.Size(32, 32)
-        Me.pCerrar.TabIndex = 0
-        Me.pCerrar.TabStop = False
         '
         'pnlMenu
         '
@@ -171,7 +111,7 @@ Partial Class clientes
         Me.pnlMenu.Location = New System.Drawing.Point(0, 35)
         Me.pnlMenu.Name = "pnlMenu"
         Me.pnlMenu.Size = New System.Drawing.Size(200, 615)
-        Me.pnlMenu.TabIndex = 2
+        Me.pnlMenu.TabIndex = 3
         '
         'Panel3
         '
@@ -275,6 +215,64 @@ Partial Class clientes
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'pCerrar
+        '
+        Me.pCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pCerrar.Image = Global.sistema.My.Resources.Resources.cancel1
+        Me.pCerrar.Location = New System.Drawing.Point(1256, 3)
+        Me.pCerrar.Name = "pCerrar"
+        Me.pCerrar.Size = New System.Drawing.Size(32, 32)
+        Me.pCerrar.TabIndex = 0
+        Me.pCerrar.TabStop = False
+        '
+        'pMaxi
+        '
+        Me.pMaxi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pMaxi.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pMaxi.Image = Global.sistema.My.Resources.Resources.maximize
+        Me.pMaxi.Location = New System.Drawing.Point(1218, 3)
+        Me.pMaxi.Name = "pMaxi"
+        Me.pMaxi.Size = New System.Drawing.Size(32, 32)
+        Me.pMaxi.TabIndex = 1
+        Me.pMaxi.TabStop = False
+        '
+        'pMini
+        '
+        Me.pMini.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pMini.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pMini.Image = Global.sistema.My.Resources.Resources.minimize
+        Me.pMini.Location = New System.Drawing.Point(1180, 3)
+        Me.pMini.Name = "pMini"
+        Me.pMini.Size = New System.Drawing.Size(32, 32)
+        Me.pMini.TabIndex = 2
+        Me.pMini.TabStop = False
+        '
+        'pRestaurar
+        '
+        Me.pRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pRestaurar.Image = Global.sistema.My.Resources.Resources.restore
+        Me.pRestaurar.Location = New System.Drawing.Point(1218, 3)
+        Me.pRestaurar.Name = "pRestaurar"
+        Me.pRestaurar.Size = New System.Drawing.Size(32, 32)
+        Me.pRestaurar.TabIndex = 3
+        Me.pRestaurar.TabStop = False
+        Me.pRestaurar.Visible = False
+        '
+        'pnlTitulo
+        '
+        Me.pnlTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.pnlTitulo.Controls.Add(Me.pRestaurar)
+        Me.pnlTitulo.Controls.Add(Me.pMini)
+        Me.pnlTitulo.Controls.Add(Me.pMaxi)
+        Me.pnlTitulo.Controls.Add(Me.pCerrar)
+        Me.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTitulo.Name = "pnlTitulo"
+        Me.pnlTitulo.Size = New System.Drawing.Size(1300, 35)
+        Me.pnlTitulo.TabIndex = 2
+        '
         'pnlContenido
         '
         Me.pnlContenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(82, Byte), Integer))
@@ -292,7 +290,7 @@ Partial Class clientes
         Me.pnlContenido.Location = New System.Drawing.Point(200, 35)
         Me.pnlContenido.Name = "pnlContenido"
         Me.pnlContenido.Size = New System.Drawing.Size(1100, 615)
-        Me.pnlContenido.TabIndex = 3
+        Me.pnlContenido.TabIndex = 4
         '
         'lIdCliente
         '
@@ -669,9 +667,9 @@ Partial Class clientes
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(72, 51)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(319, 23)
+        Me.Label1.Size = New System.Drawing.Size(333, 23)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Ingrese Nombre para Buscar un Cliente"
+        Me.Label1.Text = "Ingrese Nombre para Buscar un Producto"
         '
         'btnBuscar
         '
@@ -731,14 +729,6 @@ Partial Class clientes
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.ToolStripMenuItem1.Image = Global.sistema.My.Resources.Resources.products
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem1.Text = "Productos"
-        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -747,7 +737,15 @@ Partial Class clientes
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'clientes
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.ToolStripMenuItem1.Image = Global.sistema.My.Resources.Resources.clientes
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem1.Text = "Clientes"
+        '
+        'productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -757,21 +755,19 @@ Partial Class clientes
         Me.Controls.Add(Me.pnlTitulo)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.menuClientes
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximumSize = New System.Drawing.Size(1300, 650)
-        Me.Name = "clientes"
+        Me.Name = "productos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "clientes"
-        Me.pnlTitulo.ResumeLayout(False)
-        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pMini, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "productos"
         Me.pnlMenu.ResumeLayout(False)
         Me.pnlMenu.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pMaxi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pMini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlTitulo.ResumeLayout(False)
         Me.pnlContenido.ResumeLayout(False)
         Me.pnlContenido.PerformLayout()
         Me.pCampos.ResumeLayout(False)
@@ -782,31 +778,22 @@ Partial Class clientes
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnlTitulo As Panel
-    Friend WithEvents pRestaurar As PictureBox
-    Friend WithEvents pMini As PictureBox
-    Friend WithEvents pMaxi As PictureBox
-    Friend WithEvents pCerrar As PictureBox
     Friend WithEvents pnlMenu As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnNuevo As Button
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents btnGuardar As Button
     Friend WithEvents lblSistema As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pCerrar As PictureBox
+    Friend WithEvents pMaxi As PictureBox
+    Friend WithEvents pMini As PictureBox
+    Friend WithEvents pRestaurar As PictureBox
+    Friend WithEvents pnlTitulo As Panel
     Friend WithEvents pnlContenido As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents btnNuevo As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnBorrar As Button
-    Friend WithEvents menuClientes As MenuStrip
-    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InicioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lIdCliente As Label
     Friend WithEvents pCampos As Panel
     Friend WithEvents tEmail As TextBox
     Friend WithEvents Label15 As Label
@@ -842,7 +829,14 @@ Partial Class clientes
     Friend WithEvents ApeYNom As DataGridViewTextBoxColumn
     Friend WithEvents cuit As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnBuscar As Button
     Friend WithEvents tBuscar As TextBox
-    Friend WithEvents lIdCliente As Label
+    Friend WithEvents menuClientes As MenuStrip
+    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InicioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -39,6 +39,8 @@ Partial Class inicio
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlTitulo.SuspendLayout()
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,7 +218,7 @@ Partial Class inicio
         Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Image = Global.sistema.My.Resources.Resources.salir
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(12, 211)
+        Me.btnSalir.Location = New System.Drawing.Point(12, 255)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(185, 38)
         Me.btnSalir.TabIndex = 4
@@ -226,7 +228,7 @@ Partial Class inicio
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(3, 211)
+        Me.Panel3.Location = New System.Drawing.Point(3, 255)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(8, 38)
         Me.Panel3.TabIndex = 3
@@ -234,6 +236,8 @@ Partial Class inicio
         'pnlMenu
         '
         Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.pnlMenu.Controls.Add(Me.Panel4)
+        Me.pnlMenu.Controls.Add(Me.Button1)
         Me.pnlMenu.Controls.Add(Me.Panel3)
         Me.pnlMenu.Controls.Add(Me.btnSalir)
         Me.pnlMenu.Controls.Add(Me.Panel2)
@@ -248,6 +252,31 @@ Partial Class inicio
         Me.pnlMenu.Size = New System.Drawing.Size(200, 615)
         Me.pnlMenu.TabIndex = 1
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(3, 211)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(8, 38)
+        Me.Panel4.TabIndex = 5
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Image = Global.sistema.My.Resources.Resources.products
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(12, 211)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(185, 38)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Productos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -259,6 +288,7 @@ Partial Class inicio
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "inicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio Sistema"
         Me.pnlTitulo.ResumeLayout(False)
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -290,4 +320,6 @@ Partial Class inicio
     Friend WithEvents btnSalir As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents pnlMenu As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Button1 As Button
 End Class

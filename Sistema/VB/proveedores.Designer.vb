@@ -66,6 +66,9 @@ Partial Class proveedores
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tApellido = New System.Windows.Forms.TextBox()
         Me.gridProveedores = New System.Windows.Forms.DataGridView()
+        Me.nproveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApeYNom = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -75,10 +78,8 @@ Partial Class proveedores
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.nproveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApeYNom = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cuit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlTitulo.SuspendLayout()
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pMini, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -575,6 +576,28 @@ Partial Class proveedores
         Me.gridProveedores.Size = New System.Drawing.Size(458, 503)
         Me.gridProveedores.TabIndex = 7
         '
+        'nproveedor
+        '
+        Me.nproveedor.DataPropertyName = "nproveedor"
+        Me.nproveedor.HeaderText = "nproveedor"
+        Me.nproveedor.Name = "nproveedor"
+        Me.nproveedor.ReadOnly = True
+        Me.nproveedor.Visible = False
+        '
+        'ApeYNom
+        '
+        Me.ApeYNom.DataPropertyName = "ApeYNom"
+        Me.ApeYNom.HeaderText = "Apellido y Nombre"
+        Me.ApeYNom.Name = "ApeYNom"
+        Me.ApeYNom.ReadOnly = True
+        '
+        'cuit
+        '
+        Me.cuit.DataPropertyName = "CUIT"
+        Me.cuit.HeaderText = "CUIT"
+        Me.cuit.Name = "cuit"
+        Me.cuit.ReadOnly = True
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -642,7 +665,7 @@ Partial Class proveedores
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ToolStripMenuItem1, Me.SalirToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -663,6 +686,14 @@ Partial Class proveedores
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.ToolStripMenuItem1.Image = Global.sistema.My.Resources.Resources.products
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem1.Text = "Productos"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -670,28 +701,6 @@ Partial Class proveedores
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'nproveedor
-        '
-        Me.nproveedor.DataPropertyName = "nproveedor"
-        Me.nproveedor.HeaderText = "nproveedor"
-        Me.nproveedor.Name = "nproveedor"
-        Me.nproveedor.ReadOnly = True
-        Me.nproveedor.Visible = False
-        '
-        'ApeYNom
-        '
-        Me.ApeYNom.DataPropertyName = "ApeYNom"
-        Me.ApeYNom.HeaderText = "Apellido y Nombre"
-        Me.ApeYNom.Name = "ApeYNom"
-        Me.ApeYNom.ReadOnly = True
-        '
-        'cuit
-        '
-        Me.cuit.DataPropertyName = "CUIT"
-        Me.cuit.HeaderText = "CUIT"
-        Me.cuit.Name = "cuit"
-        Me.cuit.ReadOnly = True
         '
         'proveedores
         '
@@ -708,6 +717,7 @@ Partial Class proveedores
         Me.MaximumSize = New System.Drawing.Size(1300, 650)
         Me.MinimumSize = New System.Drawing.Size(1300, 650)
         Me.Name = "proveedores"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "proveedores"
         Me.pnlTitulo.ResumeLayout(False)
         CType(Me.pRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -784,4 +794,5 @@ Partial Class proveedores
     Friend WithEvents nproveedor As DataGridViewTextBoxColumn
     Friend WithEvents ApeYNom As DataGridViewTextBoxColumn
     Friend WithEvents cuit As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -215,6 +215,7 @@ Partial Class login
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximumSize = New System.Drawing.Size(650, 500)
         Me.Name = "login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "login"
         Me.pTitulo.ResumeLayout(False)
         Me.pTitulo.PerformLayout()

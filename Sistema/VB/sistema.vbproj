@@ -110,6 +110,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="productos.Designer.vb">
+      <DependentUpon>productos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="proveedores.Designer.vb">
       <DependentUpon>proveedores.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productos.resx">
+      <DependentUpon>productos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="proveedores.resx">
       <DependentUpon>proveedores.vb</DependentUpon>
@@ -197,6 +206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gestionSis.ico" />
+    <None Include="Resources\products.ico" />
     <None Include="Resources\security-protection-protect-key-password-login_108554.ico" />
     <None Include="Resources\loginmanager_10029.ico" />
     <None Include="Resources\Login_37128.ico" />
