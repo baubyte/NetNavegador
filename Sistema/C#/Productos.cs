@@ -180,10 +180,11 @@ namespace sistema
                 errores += "Debe Completar el Nombre del Producto." + enter;
             }
             tCodProducto.Text = tCodProducto.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "").Replace("-", "");
-            if (tCodProducto.Text.Trim().Length < 4 | tCodProducto.Text.IndexOf("11111") > -1 | tCodProducto.Text.IndexOf("12345") > -1 | tCodProducto.Text.IndexOf("000000") > -1)
+            if (tCodProducto.Text.Trim().Length < 4 | tCodProducto.Text.IndexOf("11111") > -1 | tCodProducto.Text.IndexOf("12345") > -1 | tCodProducto.Text.IndexOf("000000") > -1 | routines.Vnum(tCodProducto.Text) <= 0)
             {
-                errores += "Debe completar CORRECTAMENTE el Código del Producto." + enter;
+                errores += "Debe completar CORRECTAMENTE el Código del Producto (Solo Números." + enter;
             }
+
             if (routines.YaExisteSql("SELECT CodigoProducto FROM Productos WHERE CodigoProducto =" + routines.Vnum(tCodProducto.Text.Trim().Replace(".", "").Replace(" ", "").Replace(",", "")) + "AND NProducto != " + routines.Vnum(lIdProducto.Text)) == true)
             {
                 errores += "El Código del Producto Ingresado ya Existe." + enter;

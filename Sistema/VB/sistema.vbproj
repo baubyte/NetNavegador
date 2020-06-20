@@ -75,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarProveedor.Designer.vb">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clientes.Designer.vb">
       <DependentUpon>clientes.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="Routines.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscarProveedor.resx">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gestionSis.ico" />
+    <None Include="Resources\productDelete.ico" />
+    <None Include="Resources\productAdd.ico" />
     <None Include="Resources\products.ico" />
     <None Include="Resources\security-protection-protect-key-password-login_108554.ico" />
     <None Include="Resources\loginmanager_10029.ico" />

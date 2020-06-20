@@ -14,3 +14,4 @@ D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.clientes.resources
 D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.proveedores.resources
 D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.login.resources
 D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.productos.resources
+D:\Dev\.NET\Facultad\Sistema\VB\obj\Debug\sistema.BuscarProveedor.resources

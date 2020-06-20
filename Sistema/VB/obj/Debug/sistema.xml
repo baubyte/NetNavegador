@@ -92,6 +92,16 @@ sistema
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:sistema.My.Resources.Resources.productAdd">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:sistema.My.Resources.Resources.productDelete">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:sistema.My.Resources.Resources.products">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

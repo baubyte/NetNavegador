@@ -89,7 +89,7 @@ Public Class proveedores
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         buscar(" ApeYNom LIKE '" & tBuscar.Text & "%' ")
     End Sub
-    'Para Buscar los Clientes
+    'Para Buscar los Proveedores
     Sub buscar(ByVal condicion As String)
         Dim dataAdapter As New SqlDataAdapter("SELECT TOP (100) PERCENT NProveedor, ApeYNom, CUIT FROM ProveedoresBusqueda WHERE " & condicion & " ORDER BY ApeYNom", connection)
         Dim dataSet As New DataSet
@@ -130,7 +130,7 @@ Public Class proveedores
         If MessageBox.Show("Está por ELIMINAR definitivamente el Proveedor: " & tApellido.Text.Trim.ToUpper & " " & tNombre.Text.Trim.ToUpper & ",. Es algo EXTREMO. Está SEGURO?", "Eliminar Proveedor", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.No Then Exit Sub
         'Ejecutamos el Delete
         If SqlAccion("DELETE FROM Proveedores  WHERE  NProveedor=" & Val(lIdProveedor.Text)) = False Then
-            MsgBox("Hubo un Error al intentar Borrar el Cliente, Reintente, y Si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", MsgBoxStyle.Information, "Eliminar Cliente")
+            MsgBox("Hubo un Error al intentar Borrar el Proveedpr, Reintente, y Si el Error Persiste, Anote Todos los Datos que Quizo Ingresar y Comuníquese con el Programador (Otra Vez).", MsgBoxStyle.Information, "Eliminar Proveedor")
         Else
             buscar(" NProveedor=" & Val(lIdProveedor.Text))
             MsgBox("El Proveedor fue ELIMINADO de la Base de Datos.", MsgBoxStyle.Information, "Eliminar Proveedor")
@@ -171,7 +171,7 @@ Public Class proveedores
             CargarCamposClientes()
         End If
     End Sub
-    'Carga los Datos del Cliente seleccionado en los campos
+    'Carga los Datos del Proveedor seleccionado en los campos
     Sub CargarCamposClientes()
         If Val(lIdProveedor.Text) = 0 Then
             pCampos.Visible = False
