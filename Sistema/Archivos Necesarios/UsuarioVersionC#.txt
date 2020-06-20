@@ -1,3 +1,4 @@
 Para no tener que Crear un Cliente por dB podes usar para el Login
 Usuario: ADMIN
 Contraseña: administrador
+Estos Sirven también para versión VB
